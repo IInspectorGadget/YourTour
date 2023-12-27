@@ -1,0 +1,89 @@
+.header
+    width: 100%
+    
+    &__top
+        position: absolute
+        top: 28.88px
+        left: 0
+        right: 0
+        padding: 0 1px
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__background
+        width: 100%
+        height: 831px
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(../img/header/header-main.jpg)
+        background-size: cover
+        background-position: center
+
+    &__bottom   
+        position: absolute
+        top: 208px
+        left: 0
+        right: 0
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        gap: 50px 0
+    &__title
+        max-width: 768px
+    &__subtitle
+        max-width: 562px
+    &__button
+        background-color: #fff
+        border-radius: 10px
+        padding: 5px 20px
+
+.header-nav
+    
+    &__list
+        display: flex 
+        gap: 0px 50px
+    &__link:hover
+        border-bottom: 1px solid #fff
+        
+
+@media (max-width: 1250px)
+    .header
+        &__top
+            padding: 0 21px
+
+
+@media (max-width: 1024px)
+    .header
+        &__top
+            padding: 0 57px
+        &__subtitle
+            max-width: 442px
+    .header-nav
+        &__list
+            gap: 0 30px
+
+
+@media (max-width: 900px)
+    .header-nav
+        display: none
+
+
+@media (max-width: 720px)
+    .header
+        &__top
+            padding: 0 20px
+            top: 33px
+
+        &__logo
+            width: 134px
+            height: 23px
+        &__background
+            height: 488px
+        &__subtitle
+            max-width: 310px
+        &__bottom
+            top: 140px
+            gap: 41px 0
+            
+    .header-nav
+        &__list
+            gap: 0 30px
