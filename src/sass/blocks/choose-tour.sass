@@ -4,7 +4,7 @@
         flex-direction: column
         align-items: center 
     &__list
-        margin-top: 34px
+        margin-top: 36px
         display: flex 
         flex-wrap: wrap
         justify-content: center
@@ -17,7 +17,7 @@
         border-bottom: 2px solid #1B1F2B
 
 .choose-tour-cards
-    margin-top: 100px
+    margin-top: 102px
     display: flex 
     justify-content: center
     flex-wrap: wrap
@@ -69,14 +69,18 @@
 
     &__link
         display: flex 
+        margin-left: -21px
+        margin-bottom: -7px
         width: 199px
         gap: 15px
         padding: 7px 20px 7px 20px
         border-radius: 50px
-        position: absolute
-        left: -21px
-        bottom: -7px
-        &:after
+        // position: absolute
+        // left: -21px
+        // bottom: -7px
+        &::after
+            top: 0
+            left: 0
             position: absolute
             inset-block: 0
             inset-inline: 0
