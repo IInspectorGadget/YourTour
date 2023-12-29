@@ -35,6 +35,7 @@ select
 
 .title
     color: var(--black)
+    text-align: center
     
 .subtitle
     color: var(--gray-300)
@@ -44,6 +45,32 @@ select
         margin-top: 20px 
 
 
+.card
+    pointer-events: none
+    position: relative
+    &-detail
+        display: flex 
+        gap: 15px
+        padding: 7px 20px
+        margin: -7px -20px
+        border-radius: 50px
+        @media (max-width: 1024px)
+            gap: 16px
+        &-link
+            color: var(--white)
+            pointer-events: auto
+            &::before
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                content: ""
+                border-radius: 50px
+    
+    &:hover &-detail
+        background: var(--green-400)
+    
 
 @import ./blocks/header
 
@@ -54,3 +81,5 @@ select
 @import ./blocks/reviews
 
 @import ./blocks/travel-photo
+
+@import ./blocks/travel-history

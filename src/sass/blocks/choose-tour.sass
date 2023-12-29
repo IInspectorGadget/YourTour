@@ -24,7 +24,8 @@
     justify-content: center
     flex-wrap: wrap
     gap: 30px
-
+    &-bottom 
+        width: fit-content
     &-card
         position: relative
         display: flex 
@@ -39,7 +40,7 @@
                 background-position: center
     
     &-inner
-        position: relative
+        // position: relative
         width: 100%
         margin: 50px
         display: flex 
@@ -52,31 +53,29 @@
         color: var(--white)
         margin-top: 16px
 
-    &-link
-        display: flex 
-        margin-left: -19px
-        margin-bottom: -7px
-        width: 199px
-        gap: 15px
-        padding: 7px 20px 7px 20px
-        border-radius: 50px
+    // &-link
+    //     display: flex 
+    //     margin-left: -19px
+    //     margin-bottom: -7px
+    //     width: 199px
+    //     gap: 15px
+    //     padding: 7px 20px 7px 20px
+    //     border-radius: 50px
         
-        &::after
-            top: 0
-            left: 0
-            position: absolute
-            inset-block: 0
-            inset-inline: 0
-            cursor: pointer
-            content: ""
-            border-radius: 50px
+    //     &::after
+    //         top: 0
+    //         left: 0
+    //         position: absolute
+    //         inset-block: 0
+    //         inset-inline: 0
+    //         cursor: pointer
+    //         content: ""
+    //         border-radius: 50px
             
-        &:hover
-            background-color: #286562
+    //     &:hover
+    //         background-color: #286562
            
-    &-details 
-        display: block
-        color: var(--white)
+   
     
     
 
@@ -106,3 +105,6 @@
         margin-left: -20px
         margin-bottom: -5px
         gap: 18px
+    .choose-tour__card-detail
+        padding: 7px 19px
+        margin: -5px -19px

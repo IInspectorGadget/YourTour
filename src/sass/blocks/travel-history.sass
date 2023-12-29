@@ -1,0 +1,131 @@
+.travel-history
+    &__container
+        display: flex 
+        flex-direction: column
+        align-items: center
+        justify-content: center
+    &__subtitle 
+        width: 418px
+    &__cards
+        margin-top: 100px
+        display: flex 
+        flex-direction: column
+        width: 100%
+        gap: 50px
+    &__card
+        position: relative
+        border-radius: 50px
+        height: 567px
+        padding: 60px
+        display: flex 
+        flex-direction: column
+        justify-content: space-between
+        color: var(--white)
+        pointer-events: none
+    
+    @for $i from 1 through 3
+         &__card_#{$i}
+            background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url('../img/story/story photo-#{$i}.jpg')
+            background-position: center
+            background-size: cover
+
+    &__card-title
+        width: 554px
+    
+    &__card-paragraph
+        width: 554px
+        margin-top: 37px
+    &__card-list
+        margin-top: 29px
+        margin-left: 30px
+    &__card-item
+        list-style-type: disc
+    &__card-links 
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__card-social-list
+        display: flex
+        gap: 36px
+    &__card-social-link
+        position: relative
+        z-index: 5
+        pointer-events: auto
+        color: var(--white)
+        border-bottom: 1px solid inset
+        padding-bottom: 2px
+        &:hover
+            border-bottom: 1px solid var(--white)
+            
+
+    &__card-detail
+        display: flex 
+        gap: 15px
+        padding: 7px 20px
+        margin: -7px -20px
+        border-radius: 50px
+    &__card-detail-link
+        color: var(--white)
+        pointer-events: auto
+        
+        &::before
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            content: ""
+            border-radius: 50px
+            
+    &__card:hover .travel-history__card-detail
+        background: var(--green-400)
+
+    // &__card-detail-arrow
+ 
+    
+
+
+
+@media (max-width: 1024px)
+    .travel-history
+        @for $i from 1 through 3
+            &__card_#{$i}
+                background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url('../img/story/story photo-#{$i}-middle.jpg')
+                background-position: center
+                background-size: cover
+
+@media (max-width: 700px)
+    .travel-history
+        &__subtitle
+            width: 319px
+
+        &__cards
+            margin-top: 49px
+            gap: 20px
+        &__card
+            height: 455px
+            padding: 30px 30px 31.5px 30px
+            border-radius: 20px
+        &__card-title
+            width: 160px
+        &__card-list
+            margin-top: 23px
+            margin-left: 24px
+
+        &__card-item:marker
+            height: 0px
+        &__card-paragraph
+            width: 283px
+            margin-top: 20px
+        &__card-social
+            display: none
+        @for $i from 1 through 3
+            &__card_#{$i}
+                background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url('../img/story/story photo-#{$i}-mobile.jpg')
+                background-position: center
+                background-size: cover
+        
+        &__card-detail
+            padding: 8px 19px
+            margin: -8px -19px
