@@ -12,27 +12,22 @@
         width: 100%
         margin-top: 100px
         border-radius: 50px
-
-.tour-form
-    display: flex 
-    justify-content: space-between
-    flex-wrap: wrap
-    gap: 33px 30px
-    margin: 70px
     &__item
         width: calc(50% - 15px)
         display: flex 
         flex-direction: column
         gap: 8px
-        &-full
-            width: calc(100%)
+        &_full
+            width: 100%
+        
+        
     &__checkbox-label
         padding-left: 19px
-    &__input
+    &__field
         background-color: #F9F7F4
-        padding: 20px
+        padding: 20.5px 20px
         color: #A6A6A6
-        border: 1px solid #F9F7F4
+        border: 1px solid #F4F0E9
         gap: 10px 
         border-radius: 10px
         cursor: pointer
@@ -46,7 +41,8 @@
         overflow: hidden 
         width: 100%
         height: 152px
-
+    &__date
+        text-transform: uppercase
     &__radio
         width: 26px
         height: 26px
@@ -79,7 +75,7 @@
             background-repeat: no-repeat
             background-position: center    
 
-    &__select
+    &__select-wrapper
         display: grid
         position: relative
         &::after
@@ -98,10 +94,11 @@
     &__buttons
         display: flex 
         gap: 30px
+        flex-wrap: wrap
     &__button
         border-radius: 10px
         cursor: pointer
-    &__button-find
+    &__button_find
         padding: 15px 70.5px
         background-color: #286562
         color: #fff
@@ -110,7 +107,7 @@
         &:active 
             background-color: #627F7E
 
-    &__button-reset 
+    &__button_reset 
         padding: 15px 72.5px
         background-color: #E0F0E5
         color: #286562
@@ -119,18 +116,100 @@
         &:active
             background-color: #D9DFDB
 
-.tour-form-adult
-    display: flex
-    gap: 31px
-    &__item 
+    &__fieldset
+        display: flex 
+        justify-content: space-between
+        flex-wrap: wrap
+        gap: 33px 30px
+        margin: 70px
+            
+        
+
+    &__adult
         display: flex
+        gap: 31px
+        &-item 
+            display: flex
+            position: relative
+            gap: 11px
+
+    &__license
+        display: flex
+        align-items: center
+        line-height: 0
+
+
+    &__checkbox-wrapper
         position: relative
-        gap: 11px
 
-.tour-form-license
-    display: flex
-    line-height: 0
+    &__date
+        padding: 20.5px 20px 20.5px 18px
+        letter-spacing: -0.03em
 
 
-.tour-form-license__checkbox
-    position: relative
+
+@media (max-width:1024px )
+    .collect-tour
+        &__fieldset
+            margin: 60px 
+            gap: 33px 20px
+        &__item
+            width: calc(50% - 10px)
+            &_full
+                width: 100%
+        &__checkbox-label
+            padding-left:11px
+
+@media (max-width:550px )
+    .collect-tour
+        &__form 
+            margin-top: 40px 
+            border-radius: 30px
+        &__fieldset
+            margin: 20px 
+            gap: 30px
+            flex-direction: column
+        &__item
+            width: 100%
+
+        &__checkbox-label
+            padding-left:11px
+        
+        &__textarea
+            height: 132px
+
+        &__buttons
+            gap: 10px
+        &__button
+            line-height: 17px
+        &__button_find
+            padding: 15px 29.7px
+        &__button_reset 
+            padding: 15px 31.3px
+
+
+        &__field
+            padding: 11px 10px
+        &__direction
+            padding: 12.5px 10px
+        &__date
+            padding: 10px 10px 10px 8px
+
+        &__select-wrapper
+            &::after
+                top: calc(50% - 12px)
+                right: 10px
+        &__radio
+            width: 20px
+            height: 20px
+        &__adult-item
+            gap: 10px
+        &__license
+            align-items: flex-start
+
+        &__checkbox
+            width: 20px
+            height: 20px
+            &:checked::before
+                width: 20px
+                height: 20px

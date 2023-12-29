@@ -138,71 +138,76 @@
 					<h2 class="collect-tour__title h2 text-black">Собери свой тур</h2>
 					<p class="collect-tour__subtitle p-normal subtitle">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
 					<div class="collect-tour__form">
-						<form action="#" class="tour-form p-normal">
-							<div class="tour-form__name tour-form__item">
-								<span for="name" class="tour-form__label">Имя</span>
-								<input id="name" name="name" type="text" class="tour-form__input" placeholder="Введите Ваше имя">
+						<form action="#" class="collect-tour__fieldset p-normal">
+
+							<div class="collect-tour__item">
+								<span class="collect-tour__label">Имя</span>
+								<input id="name" name="name" type="text" class="collect-tour__field" placeholder="Введите Ваше имя">
 							</div>
-							<div class="tour-form__direction tour-form__item">
-								<span for="direction" class="tour-form__label">Направление</span>
-								<div class="tour-form__select">
-									<select id="direction" name="direction" class="tour-form__input">
-										<option value="" disabled selected>Куда хотите ехать</option>
-										<option value="2">Путешествие в горы</option>
-										<option value="2">Путешествие в горы</option>
+
+							<div class="collect-tour__item">
+								<span class="collect-tour__label">Направление</span>
+								<div class="collect-tour__select-wrapper">
+									<select id="direction" name="direction" class="collect-tour__field collect-tour__direction">
+										<option class="collect-tour__option" value="" disabled selected>Куда хотите ехать</option>
+										<option class="collect-tour__option" value="2">Путешествие в горы</option>
+										<option class="collect-tour__option" value="2">Путешествие в горы</option>
 									</select>
 								</div>
-								
 							</div>
-							<div class="tour-form__email tour-form__item">
-								<span for="email" class="tour-form__label ">Email</span>
-								<input id="email" name="email" type="email" class="tour-form__input" placeholder="example@mail.com">
-							</div>
-							<div class="tour-form__tel tour-form__item">
-								<span for="tel" class="tour-form__label">Телефон</span>
-								<input id="tel" name="tel" type="tel" class="tour-form__input" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _">
-							</div>
-							<div class="tour-form__date-start tour-form__item">
-								<span for="date-start" class="tour-form__label">Дата от</span>
-								<input id="date-start" name="date-start" type="date" class="tour-form__input unstyled-date">
-							</div>
-							<div class="tour-form__date-end tour-form__item">
-								<span for="date-end" class="tour-form__label">Дата до</span>
-								<input id="date-end" name="date-end" type="date" class="tour-form__input unstyled-date">
+							
+							<div class="collect-tour__item">
+								<span class="collect-tour__label">Email</span>
+								<input id="email" name="email" type="email" class="collect-tour__field" placeholder="example@mail.com">
 							</div>
 
-							<div class="tour-form__date-end tour-form__item tour-form__item-full">
-								<span for="comment" class="tour-form__label">Комментарий</span>
-								<textarea id="comment" name="comment"  class="tour-form__input tour-form__textarea "></textarea>
+							<div class="collect-tour__item">
+								<span class="collect-tour__label">Телефон</span>
+								<input id="tel" name="tel" type="tel" class="collect-tour__field" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _">
 							</div>
 
-							<div class="tour-form__date-end tour-form__item tour-form__item-full">
-								<span for="date-end" class="tour-form__label">Вам есть 18 лет?</span>
-								<div class="tour-form-adult">
-									<div class="tour-form-adult__item">
-										<input value="yes" id="yes" name="adult" type="radio" class="tour-form__radio">
+							<div class="collect-tour__item">
+								<span class="collect-tour__label p-normal">Дата от</span>
+								<input id="date-start" name="date-start" type="date" class="collect-tour__field collect-tour__date unstyled-date">
+							</div>
+
+							<div class="collect-tour__item">
+								<span class="collect-tour__label">Дата до</span>
+								<input id="date-end" name="date-end" type="date" class="collect-tour__field collect-tour__date  unstyled-date">
+							</div>
+
+							<div class="collect-tour__item collect-tour__item_full">
+								<span class="collect-tour__label">Комментарий</span>
+								<textarea id="comment" name="comment"  class="collect-tour__field collect-tour__textarea"></textarea>
+							</div>
+
+							<div class="collect-tour__item collect-tour__item_full">
+								<span class="collect-tour__label">Вам есть 18 лет?</span>
+								<div class="collect-tour__adult">
+									<div class="collect-tour__adult-item">
+										<input value="yes" id="yes" name="adult" type="radio" class="collect-tour__radio">
 										<label for="yes">Да</label>
 									</div>
-									<div class="tour-form-adult__item">
-										<input value="no" id="yes" name="adult" type="radio" class="tour-form__radio">
+									<div class="collect-tour__adult-item">
+										<input value="no" id="no" name="adult" type="radio" class="collect-tour__radio">
 										<label for="no">Нет</label>
 									</div>
 								</div>
 							</div>
 
-							<div class="tour-form__date-end tour-form__item tour-form__item-full">
-								<div class="tour-form-license">
-									<div class="tour-form-license__checkbox">
-										<input id="license" name="license" type="checkbox" class="tour-form__checkbox unstyled-date">
+							<div class="collect-tour__item collect-tour__item_full">
+								<div class="collect-tour__license">
+									<div class="collect-tour__checkbox-wrapper">
+										<input id="license" name="license" type="checkbox" class="collect-tour__checkbox unstyled-date">
 									</div>
-									<label for="license" class="tour-form__label text-grey tour-form__checkbox-label p-small">Нажимая кнопку, я принимаю условия <a href="#" class="text-black">Лицензионного договора</a></lab>
+									<label for="license" class="collect-tour__label text-grey collect-tour__checkbox-label p-small">Нажимая кнопку, я принимаю условия <a href="#" class="text-black">Лицензионного договора</a></lab>
 								</div>
 							</div>
 
-							<div class="tour-form__date-end tour-form__item tour-form__item-full">
-								<div class="tour-form__buttons">
-									<div class="tour-form__button tour-form__button-find">Найти тур</div>
-									<div class="tour-form__button tour-form__button-reset">Сбросить</div>
+							<div class="collect-tour__item collect-tour__item_full">
+								<div class="collect-tour__buttons">
+									<div class="collect-tour__button collect-tour__button_find">Найти тур</div>
+									<div class="collect-tour__button collect-tour__button_reset">Сбросить</div>
 								</div>
 							</div>
 
