@@ -1,0 +1,101 @@
+.travel-photo
+    
+    $container_max-width: 1860px
+    $list-height: 963px
+
+    &__container
+        display: flex 
+        flex-direction: column
+        align-items: center
+        max-width: calc($container_max-width + 60px)
+        text-align: center
+    &__subtitle
+        width: 418px
+
+    
+    &__list
+        height: $list-height
+        margin-top: 100px
+        display: flex 
+        flex-direction: column
+        gap: calc(30px * 100% / $list-height) 
+        width: 100%
+        
+
+    &__list-line 
+        display: flex
+        gap: calc(30px * 100% / $container_max-width) 
+        justify-content: center
+        height: 301px
+    &__item
+        flex-grow: 0
+        flex-shrink: 1
+
+    &__item_width_25
+        flex-basis: calc(442.5px * 100% / $container_max-width)
+
+    &__item_width_2
+        flex-basis: calc(347.998px * 100% / $container_max-width)
+
+    &__img 
+        width: 100%
+        height: 100%
+        border-radius: 50px
+        object-fit: cover
+        object-position: center
+    
+    @media (max-width: 1024px)
+        .travel-photo  
+            $container_max-width: 984px
+            $list-height: 963px
+            &__container
+                max-width: calc($container_max-width + 40px)
+            &__list
+                gap: calc(30px * 100% / $list-height) 
+            &__list-line
+                gap: calc(20px * 100% / $container_max-width)
+
+
+            &__item_width_25
+                flex-basis: calc(314.67px * 100% / $container_max-width)
+            &__item_width_2
+                flex-basis: calc(231px * 100% / $container_max-width)
+                
+            &__item_2, &__item_7, &__item_13
+                display: none
+                
+    @media (max-width: 700px)
+        .travel-photo  
+            $container_max-width: 318px
+            $list-height: 366px
+            &__subtitle
+                width: 100%
+            &__container
+                max-width: calc($container_max-width + 42px)
+            &__list
+                margin-top: 50px
+                height: $list-height
+                gap: calc(18px * 100% / $list-height)  
+            &__list-line
+                height: 110px
+                gap: calc(18px * 100% / $container_max-width) 
+            &__list-line_middle
+                gap: calc(10px * 100% / $container_max-width) 
+            &__list-line_bottom
+                gap: calc(10px * 100% / $container_max-width) 
+
+
+            &__img 
+                border-radius: 20px
+
+            &__item_width_25
+                flex-basis: calc(150px * 100% / $container_max-width)
+            &__item_width_2
+                flex-basis: calc(99.33px * 100% / $container_max-width)
+            
+            &__item_10, &__item_11
+                flex-basis: calc(154px * 100% / $container_max-width)
+
+            &__item_3, &__item_6, &__item_12
+                display: none
+

@@ -17,17 +17,20 @@ select
 
 .container
     position: relative
-    max-width: 1170px
+    max-width: calc(1170px + 60px)
     width: 100%
     margin: 0 auto
+    padding: 0 30px
     &-margin-top
         margin-top: 135px
         @media (max-width: 720px)
             margin-top: 76px
     @media (max-width:1024px )
-        max-width: 918px
+        padding: 0 20px
+        max-width: calc(918px + 40px)
     @media (max-width:360px )
-        max-width: 318px
+        padding: 0 21px
+        max-width: calc(318px + 42px)
 
     
 .subtitle
@@ -46,3 +49,5 @@ select
 @import ./blocks/collect-tour
 
 @import ./blocks/reviews
+
+@import ./blocks/travel-photo
