@@ -12,62 +12,47 @@
     &__item
         border-bottom: 2px solid transparent
         padding-bottom: 2px
+        color: var(--black)
+
     &__item:hover
         cursor: pointer
-        border-bottom: 2px solid #1B1F2B
+        border-bottom: 2px solid var(--black)
 
-.choose-tour-cards
+.choose-tour__cards
     margin-top: 102px
     display: flex 
     justify-content: center
     flex-wrap: wrap
     gap: 30px
-    &__card
+
+    &-card
         position: relative
         display: flex 
         justify-content: center
         height: 531px
         width: 370px
         border-radius: 50px
-        &-1
-            background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%), url('../img/cards/card tour photo-1.jpg')
-            background-size: cover
-            background-position: center
-
-        &-2 
-            background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%), url('../img/cards/card tour photo-2.jpg')
-            background-size: cover
-            background-position: center
-
-        &-3
-            background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%), url('../img/cards/card tour photo-3.jpg')
-            background-size: cover
-            background-position: center
-
-        &-4
-            background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%), url('../img/cards/card tour photo-4.jpg')
-            background-size: cover
-            background-position: center
-        &-5
-            background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%), url('../img/cards/card tour photo-5.jpg')
-            background-size: cover
-            background-position: center
-        &-6
-            background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%), url('../img/cards/card tour photo-6.jpg')
-            background-size: cover
-            background-position: center
-        
-    &__inner
+        @for $i from 1 through 6
+            &_#{$i}
+                background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%), url('../img/cards/card tour photo-#{$i}.jpg')
+                background-size: cover
+                background-position: center
+    
+    &-inner
         position: relative
         width: 100%
         margin: 50px
         display: flex 
         flex-direction: column 
         justify-content: space-between
-    &__cost
+
+    &-title
+        color: var(--white)
+    &-cost
+        color: var(--white)
         margin-top: 16px
 
-    &__link
+    &-link
         display: flex 
         margin-left: -19px
         margin-bottom: -7px
@@ -75,9 +60,7 @@
         gap: 15px
         padding: 7px 20px 7px 20px
         border-radius: 50px
-        // position: absolute
-        // left: -21px
-        // bottom: -7px
+        
         &::after
             top: 0
             left: 0
@@ -91,15 +74,16 @@
         &:hover
             background-color: #286562
            
-    &__details 
+    &-details 
         display: block
+        color: var(--white)
     
     
 
 @media (max-width: 1024px)
-    .choose-tour-cards
+    .choose-tour__cards
         gap: 18px
-        &__card
+        &-card
             width: 450px
 
 @media (max-width: 720px)
@@ -108,17 +92,17 @@
         padding-bottom: 0px
         max-width: 325px
         gap: 8px 10px
-    .choose-tour-cards
+    .choose-tour__cards
         margin-top: 44px
-    .choose-tour-cards__card
+    .choose-tour__cards-card
         width: 318px
         height: 318px
         border-radius: 20px
-    .choose-tour-cards__inner
+    .choose-tour__cards-inner
         margin: 25px
-    .choose-tour-cards__link:hover
+    .choose-tour__cards-link:hover
         background-color: inherit
-    .choose-tour-cards__link
+    .choose-tour__cards-link
         margin-left: -20px
         margin-bottom: -5px
         gap: 18px

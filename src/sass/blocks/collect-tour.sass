@@ -8,7 +8,7 @@
     &__subtitle
         max-width: 409px
     &__form
-        background-color: #fff
+        background-color: var(--white)
         width: 100%
         margin-top: 100px
         border-radius: 50px
@@ -24,18 +24,18 @@
     &__checkbox-label
         padding-left: 19px
     &__field
-        background-color: #F9F7F4
+        background-color: var(--beige-100)
         padding: 20.5px 20px
         color: #A6A6A6
-        border: 1px solid #F4F0E9
+        border: 1px solid var(--beige-200)
         gap: 10px 
         border-radius: 10px
         cursor: pointer
         outline:0px
         &:hover
-            background-color: #F4F0E9
+            background-color: var(--beige-200)
         &:focus
-            border-color: #A6A6A6
+            border-color: var(--gray-300)
     &__textarea
         resize: none
         overflow: hidden 
@@ -46,7 +46,7 @@
     &__radio
         width: 26px
         height: 26px
-        accent-color: #1B1F2B
+        accent-color: var(--black)
         cursor: pointer
         &::after
             position: absolute
@@ -100,21 +100,21 @@
         cursor: pointer
     &__button_find
         padding: 15px 70.5px
-        background-color: #286562
+        background-color: var(--green-400)
         color: #fff
         &:hover
-            background-color: #3B7E7B
+            background-color: var(--green-300)
         &:active 
-            background-color: #627F7E
+            background-color: var(--green-200)
 
     &__button_reset 
         padding: 15px 72.5px
-        background-color: #E0F0E5
-        color: #286562
+        background-color: var(--green-100)
+        color: var(--green-400)
         &:hover
-            background-color: #F1F3F2
+            background-color: var(--gray-100)
         &:active
-            background-color: #D9DFDB
+            background-color: var(--gray-200)
 
     &__fieldset
         display: flex 
@@ -138,6 +138,10 @@
         align-items: center
         line-height: 0
 
+    &__license-label
+        color: var(--gray-300)
+    &__license-link
+        color: var(--black)
 
     &__checkbox-wrapper
         position: relative
