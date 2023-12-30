@@ -4,13 +4,30 @@
     background-size: cover
     background-position: center
     &__top
-        position: absolute
-        top: 28.88px
-        left: 0
-        right: 0
         display: flex
         align-items: center
         justify-content: space-between
+
+    &__wrapper-top
+        position: absolute
+        padding-top: 28.88px
+        padding-bottom: 28.88px
+        top: 0
+        left: 0
+        right: 0
+        z-index: 10
+
+    &__nav
+        &-list
+            display: flex 
+            gap: 0px 50px
+        &-link:hover
+            border-bottom: 1px solid var(--white)
+        &-link 
+            color: var(--white)
+    &__phone
+        color: var(--white)
+        padding-bottom: 1px
 
     &__bottom   
         padding-top: 208px
@@ -22,20 +39,33 @@
         gap: 50px 0
     &__title
         max-width: 768px
+        color: var(--white)
     &__subtitle
         max-width: 562px
+        color: var(--white)
     &__button
-        background-color: #fff
+        background-color: var(--white)
         border-radius: 10px
         padding: 5px 20px
+        color: var(--black)
+        &:hover 
+            background-color: var(--orange-200)
+            color: var(--white)
+        &:active
+            background-color: var(--orange-100)
+            color: var(--black)
 
-.header-nav
-    
-    &__list
-        display: flex 
-        gap: 0px 50px
-    &__link:hover
-        border-bottom: 1px solid #fff
+
+
+    &__wrapper-top-fixed
+        position: fixed
+        background-color: #F3EFE899
+    &__wrapper-top-fixed &__nav-link, &__wrapper-top-fixed &__phone
+        color: var(--black)
+        &:hover
+            border-bottom: 1px solid var(--black)
+    &__wrapper-top-fixed  &__logo
+        filter: brightness(0) saturate(100%) invert(7%) sepia(33%) saturate(882%) hue-rotate(188deg) brightness(91%) contrast(88%)
         
 
 
@@ -45,23 +75,23 @@
             padding: 0 24px
         &__subtitle
             max-width: 442px
-    .header-nav
-        &__list
-            gap: 0 30px
+        &__nav
+            &-list
+                gap: 0 30px
 
 
 @media (max-width: 900px)
-    .header-nav
+    .header__nav
         display: none
 
 
 @media (max-width: 720px)
     .header
         height: 488px
+        &__wrapper-top
+            padding: 32.5px 0
         &__top
-            padding: 0 20px
-            top: 33px
-
+            padding: 0px 20px
         &__logo
             width: 134px
             height: 23px
@@ -74,6 +104,6 @@
             padding-top: 140px
             padding-bottom: 52px
             
-    .header-nav
-        &__list
-            gap: 0 30px
+        &__nav
+            &-list
+                gap: 0 30px

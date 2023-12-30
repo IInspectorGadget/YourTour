@@ -1,7 +1,8 @@
 @import ./base/_reset
 @import ./base/variables
 @import ./base/fonts
-
+html 
+    scroll-behavior: smooth !important
 body
     background-color: var(--beige-100)
 
@@ -22,15 +23,21 @@ select
     width: 100%
     margin: 0 auto
     padding: 0 30px
+    &_padding-top
+        padding-top: 135px
+        @media (max-width: 720px)
+            padding-top: 76px
     &_margin-top
         margin-top: 135px
         @media (max-width: 720px)
             margin-top: 76px
     @media (max-width:1024px )
-        padding: 0 20px
+        padding-left: 20px
+        padding-right: 20px
         max-width: calc(918px + 40px)
     @media (max-width:360px )
-        padding: 0 21px
+        padding-left: 21px
+        padding-right: 21px
         max-width: calc(318px + 42px)
 
 .title
@@ -43,11 +50,38 @@ select
     text-align: center
     @media (max-width:360px )
         margin-top: 20px 
+        
+@keyframes zoom-in
+    0%
+        transform: scale(1)
+    100%
+        transform: scale(1.2)
+            
+@keyframes zoom-out
+    0%
+        transform: scale(1.2)
 
+    100%
+        transform: scale(1)
 
 .card
     pointer-events: none
     position: relative
+    overflow: hidden
+
+    &-zoom
+        pointer-events: auto
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        animation: zoom-out 300ms ease forwards
+        border-radius: 50px
+        @media (max-width: 700px)
+            border-radius: 20px
+
+
     &-detail
         display: flex 
         gap: 15px
@@ -70,7 +104,13 @@ select
     
     &:hover &-detail
         background: var(--green-400)
-    
+    &:active &-detail
+        background: var(--orange-200)
+
+    &:hover &-zoom
+        animation: zoom-in 300ms ease forwards
+
+
 
 @import ./blocks/header
 

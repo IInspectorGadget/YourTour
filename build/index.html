@@ -9,60 +9,46 @@
 	</head>
 	<body>
 		<header class="header">
-			<div class="header__inner">
+			<div class="header__wrapper-top ">
 				<div class="container header__top  p-normal">
-						<img class="header__logo" src="../img/header/YourTour.svg" alt="logo">
-						<nav class="header-nav">
-							<ul class="header-nav__list ">
-								<li class="header-nav__item"><a href="#" class="header-nav__link text-white">Туры</a></li>
-								<li class="header-nav__item"><a href="#" class="header-nav__link text-white">Создать тур</a></li>
-								<li class="header-nav__item"><a href="#" class="header-nav__link text-white">Отзывы</a></li>
-								<li class="header-nav__item"><a href="#" class="header-nav__link text-white">Истории</a></li>
-							</ul>
-						</nav>
-						<a class="header__phone text-white" href="#">+7 999 999 99 99</a>
+					<img class="header__logo" src="../img/header/YourTour.svg" alt="logo">
+					<nav class="header__nav">
+						<ul class="header__nav-list ">
+							<li class="header__nav-item"><a href="#choose-tour" class="header__nav-link">Туры</a></li>
+							<li class="header__nav-item"><a href="#collect-tour" class="header__nav-link">Создать тур</a></li>
+							<li class="header__nav-item"><a href="#reviews" class="header__nav-link">Отзывы</a></li>
+							<li class="header__nav-item"><a href="#travel-history" class="header__nav-link">Истории</a></li>
+						</ul>
+					</nav>
+					<a class="header__phone" href="tel:+79999999999">+7 999 999 99 99</a>
 				</div>
-				<div class="container header__bottom">
-						<h1 class="header__title h1 text-white">Идеальные путешествия существуют</h1>
-						<p class="header__subtitle p-normal text-white">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
-						<a href="#" class="header__button p-small text-black">Найти тур</a>
-				</div>
-			</div>	
+			</div>
+			
+			<div class="container header__bottom">
+					<h1 class="header__title h1">Идеальные путешествия существуют</h1>
+					<p class="header__subtitle p-normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
+					<a href="#" class="header__button p-small">Найти тур</a>
+			</div>
 		</header>
 
 		<main class="main">
-			<section class="choose-tour">
-				<div class="container container_margin-top choose-tour__container">
+			<section class="choose-tour" id="choose-tour">
+				<div class="container container_padding-top choose-tour__container">
 					<h2 class="choose-tour__title h2 title">Выбери свой тур</h2>
 					<ul class="choose-tour__list p-big ">
-						<li class="choose-tour__item">Популярные</li>
-						<li class="choose-tour__item">Авторские</li>
-						<li class="choose-tour__item">Походы</li>
-						<li class="choose-tour__item">Сплавы</li>
-						<li class="choose-tour__item">Велопрогулки</li>
+						<li class="choose-tour__item" data-filter="popular">Популярные</li>
+						<li class="choose-tour__item" data-filter="copyright">Авторские</li>
+						<li class="choose-tour__item" data-filter="hiking">Походы</li>
+						<li class="choose-tour__item" data-filter="rafting">Сплавы</li>
+						<li class="choose-tour__item" data-filter="cycling">Велопрогулки</li>
 					</ul>
 
 					<div class="choose-tour__cards">
-						<div class="choose-tour__cards-card choose-tour__cards-card_1 card">
+						<div class="choose-tour__cards-card card" data="popular">
+							<div class="choose-tour__cards-card_1 card-zoom"></div>
+
 							<div class="choose-tour__cards-inner">
-								<div class="choose-tour__cards-top">
-									<h3 class="choose-tour__cards-title h3">Путешествие в горы</h3>
-									<p class="choose-tour__cards-cost p-small">от 80 000 руб</p>
-								</div>
-								<div class="choose-tour__cards-bottom">
-									<div class="choose-tour__card-detail card-detail p-big">
-										<a href="#" class="choose-tour__card-detail-link card-detail-link">Подробнее</a>
-										<img src="../img/icons/arrow.svg" alt="arrow" class="choose-tour__card-detail-arrow card-detail-arrow">
-									</div>
-									<!-- <a href="#" class="choose-tour__cards-link">
-										<span class="choose-tour__cards-details p-big">Подробнее</span>
-										<img class="choose-tour__cards-arrow" src="../img/icons/arrow.svg" alt="arrow-left">
-									</a> -->
-								</div>
-							</div>
-						</div>
-						<div class="choose-tour__cards-card choose-tour__cards-card_2 card">
-							<div class="choose-tour__cards-inner">
+
 								<div class="choose-tour__cards-top">
 									<h3 class="choose-tour__cards-title h3">Путешествие в горы</h3>
 									<p class="choose-tour__cards-cost p-small">от 80 000 руб</p>
@@ -75,7 +61,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="choose-tour__cards-card choose-tour__cards-card_3 card">
+						<div class="choose-tour__cards-card card" data="popular">
+							<div class="choose-tour__cards-card_2 card-zoom"></div>
 							<div class="choose-tour__cards-inner">
 								<div class="choose-tour__cards-top">
 									<h3 class="choose-tour__cards-title h3">Путешествие в горы</h3>
@@ -89,7 +76,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="choose-tour__cards-card choose-tour__cards-card_4 card">
+						<div class="choose-tour__cards-card card" data="copyright">
+							<div class="choose-tour__cards-card_3 card-zoom"></div>
 							<div class="choose-tour__cards-inner">
 								<div class="choose-tour__cards-top">
 									<h3 class="choose-tour__cards-title h3">Путешествие в горы</h3>
@@ -103,7 +91,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="choose-tour__cards-card choose-tour__cards-card_5 card">
+						<div class="choose-tour__cards-card card" data="rafting">
+							<div class="choose-tour__cards-card_4 card-zoom"></div>
 							<div class="choose-tour__cards-inner">
 								<div class="choose-tour__cards-top">
 									<h3 class="choose-tour__cards-title h3">Путешествие в горы</h3>
@@ -117,7 +106,23 @@
 								</div>
 							</div>
 						</div>
-						<div class="choose-tour__cards-card choose-tour__cards-card_6 card">
+						<div class="choose-tour__cards-card card" data="cycling">
+							<div class="choose-tour__cards-card_5 card-zoom"></div>
+							<div class="choose-tour__cards-inner">
+								<div class="choose-tour__cards-top">
+									<h3 class="choose-tour__cards-title h3">Путешествие в горы</h3>
+									<p class="choose-tour__cards-cost p-small">от 80 000 руб</p>
+								</div>
+								<div class="choose-tour__cards-bottom">
+									<div class="choose-tour__card-detail card-detail p-big">
+										<a href="#" class="choose-tour__card-detail-link card-detail-link">Подробнее</a>
+										<img src="../img/icons/arrow.svg" alt="arrow" class="choose-tour__card-detail-arrow card-detail-arrow">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="choose-tour__cards-card card" data="cycling">
+							<div class="choose-tour__cards-card_6 card-zoom"></div>
 							<div class="choose-tour__cards-inner">
 								<div class="choose-tour__cards-top">
 									<h3 class="choose-tour__cards-title h3">Путешествие в горы</h3>
@@ -135,8 +140,8 @@
 				</div>
 			</section>
 			
-			<section class="collect-tour">
-				<div class="container container_margin-top collect-tour__container">
+			<section class="collect-tour" id="collect-tour">
+				<div class="container container_padding-top collect-tour__container">
 					<h2 class="collect-tour__title h2 title">Собери свой тур</h2>
 					<p class="collect-tour__subtitle p-normal subtitle">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
 					<div class="collect-tour__form">
@@ -208,8 +213,8 @@
 
 							<div class="collect-tour__item collect-tour__item_full">
 								<div class="collect-tour__buttons">
-									<div class="collect-tour__button collect-tour__button_find">Найти тур</div>
-									<div class="collect-tour__button collect-tour__button_reset">Сбросить</div>
+									<button class="collect-tour__button collect-tour__button_find p-normal">Найти тур</button>
+									<button class="collect-tour__button collect-tour__button_reset p-normal">Сбросить</button>
 								</div>
 							</div>
 
@@ -219,8 +224,8 @@
 				</div>
 			</section>
 
-			<section class="reviews">
-				<div class="container container_margin-top reviews__container">
+			<section class="reviews" id="reviews">
+				<div class="container container_padding-top reviews__container">
 					<h2 class="reviews__title h2 title">Отзывы наших путешественников</h2>
 					<p class="reviews__subtitle p-normal subtitle">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
 
@@ -260,8 +265,8 @@
 			</section>
 
 			
-			<section class="travel-photo">
-				<div class="container container_margin-top travel-photo__container">
+			<section class="travel-photo" id="travel-photo">
+				<div class="container container_padding-top travel-photo__container">
 					<h2 class="travel-photo__title h2 title">Фотографии путешествий</h2>
 					<p class="travel-photo__subtitle p-normal subtitle">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
 
@@ -316,74 +321,85 @@
 				</div>
 			</section>
 
-			<section class="travel-history">
-				<div class="container container_margin-top travel-history__container">
+			<section class="travel-history" id="travel-history">
+				<div class="container container_padding-top travel-history__container">
 					<h2 class="travel-history__title h2 title">Истории путешествий</h2>
 					<p class="travel-history__subtitle p-normal subtitle">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
 
 					<div class="travel-history__cards">
-						<div class="travel-history__card travel-history__card_1">
-							<div class="travel-history__card-info">
-								<h3 class="travel-history__card-title h3">Автостопом в Стамбул</h3>
-								<p class="travel-history__card-paragraph p-normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:</p>
-								<ul class="travel-history__card-list p-normal">
-									<li class="travel-history__card-item">вкусная еда</li>
-									<li class="travel-history__card-item">дешевый транспорт</li>
-									<li class="travel-history__card-item">красивый город.</li>
-								</ul>
-							</div>
-							<div class="travel-history__card-links">
-								<div class="travel-history__card-detail detail p-big">
-									<a href="#" class="travel-history__card-detail-link detail-link">Подробнее</a>
-									<img src="../img/icons/arrow.svg" alt="arrow" class="travel-history__card-detail-arrow detail-arrow">
-								</div>
-								<div class="travel-history__card-social p-normal">
-									<ul class="travel-history__card-social-list">
-										<li class="travel-history__card-social-item"><a href="#" class="travel-history__card-social-link">instagram</a> </li>
-										<li class="travel-history__card-social-item"><a href="#" class="travel-history__card-social-link">facebook</a> </li>
-										<li class="travel-history__card-social-item"><a href="#" class="travel-history__card-social-link">YouTube</a> </li>
+						<div class="travel-history__card card">
+							<div class="travel-history__card_1 card-zoom"></div>
+							<div class="travel-history__inner">
+								<div class="travel-history__card-info">
+									<h3 class="travel-history__card-title h3">Автостопом в Стамбул</h3>
+									<p class="travel-history__card-paragraph p-normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:</p>
+									<ul class="travel-history__card-list p-normal">
+										<li class="travel-history__card-item">вкусная еда</li>
+										<li class="travel-history__card-item">дешевый транспорт</li>
+										<li class="travel-history__card-item">красивый город.</li>
 									</ul>
+								</div>
+								<div class="travel-history__card-links">
+									<div class="travel-history__card-detail card-detail p-big">
+										<a href="#" class="travel-history__card-detail-link detail-link">Подробнее</a>
+										<img src="../img/icons/arrow.svg" alt="arrow" class="travel-history__card-detail-arrow detail-arrow">
+									</div>
+									<div class="travel-history__card-social p-normal">
+										<ul class="travel-history__card-social-list">
+											<li class="travel-history__card-social-item"><a href="#" class="travel-history__card-social-link">instagram</a> </li>
+											<li class="travel-history__card-social-item"><a href="#" class="travel-history__card-social-link">facebook</a> </li>
+											<li class="travel-history__card-social-item"><a href="#" class="travel-history__card-social-link">YouTube</a> </li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
 
-						<div class="travel-history__card travel-history__card_2">
-							<div class="travel-history__card-info">
-								<h3 class="travel-history__card-title h3">Автостопом в Стамбул</h3>
-								<p class="travel-history__card-paragraph p-normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:</p>
-							</div>
-							<div class="travel-history__card-links">
-								<div class="travel-history__card-detail detail p-big">
-									<a href="#" class="travel-history__card-detail-link detail-link">Подробнее</a>
-									<img src="../img/icons/arrow.svg" alt="arrow" class="travel-history__card-detail-arrow detail-arrow">
+						<div class="travel-history__card card">
+							<div class="travel-history__card_2 card-zoom"></div>
+							<div class="travel-history__inner">
+								<div class="travel-history__card-info">
+									<h3 class="travel-history__card-title h3">Автостопом в Стамбул</h3>
+									<p class="travel-history__card-paragraph p-normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:</p>
 								</div>
-								<div class="travel-history__card-social p-normal">
-									<ul class="travel-history__card-social-list">
-										<li class="travel-history__card-social-item"><a href="#" class="travel-history__card-social-link">instagram</a> </li>
-										<li class="travel-history__card-social-item"><a href="#" class="travel-history__card-social-link">ВКонтакте</a> </li>
-									</ul>
+								<div class="travel-history__card-links">
+									<div class="travel-history__card-detail card-detail p-big">
+										<a href="#" class="travel-history__card-detail-link detail-link">Подробнее</a>
+										<img src="../img/icons/arrow.svg" alt="arrow" class="travel-history__card-detail-arrow detail-arrow">
+									</div>
+									<div class="travel-history__card-social p-normal">
+										<ul class="travel-history__card-social-list">
+											<li class="travel-history__card-social-item"><a href="#" class="travel-history__card-social-link">instagram</a> </li>
+											<li class="travel-history__card-social-item"><a href="#" class="travel-history__card-social-link">ВКонтакте</a> </li>
+										</ul>
+									</div>
 								</div>
 							</div>
+							
 						</div>
 
-						<div class="travel-history__card travel-history__card_3">
-							<div class="travel-history__card-info">
-								<h3 class="travel-history__card-title h3">Автостопом в Стамбул</h3>
-								<p class="travel-history__card-paragraph p-normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:</p>
-							</div>
-							<div class="travel-history__card-links">
-								<div class="travel-history__card-detail detail p-big">
-									<a href="#" class="travel-history__card-detail-link detail-link">Подробнее</a>
-									<img src="../img/icons/arrow.svg" alt="arrow" class="travel-history__card-detail-arrow detail-arrow">
+						<div class="travel-history__card card">
+							<div class="travel-history__card_3 card-zoom"></div>
+							<div class="travel-history__inner">
+								<div class="travel-history__card-info">
+									<h3 class="travel-history__card-title h3">Автостопом в Стамбул</h3>
+									<p class="travel-history__card-paragraph p-normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:</p>
 								</div>
-								<div class="travel-history__card-social p-normal">
-									<ul class="travel-history__card-social-list">
-										<li class="travel-history__card-social-item"><a href="#" class="travel-history__card-social-link">instagram</a> </li>
-										<li class="travel-history__card-social-item"><a href="#" class="travel-history__card-social-link">facebook</a> </li>
-										<li class="travel-history__card-social-item"><a href="#" class="travel-history__card-social-link">ВКонтакте</a> </li>
-									</ul>
+								<div class="travel-history__card-links">
+									<div class="travel-history__card-detail card-detail p-big">
+										<a href="#" class="travel-history__card-detail-link detail-link">Подробнее</a>
+										<img src="../img/icons/arrow.svg" alt="arrow" class="travel-history__card-detail-arrow detail-arrow">
+									</div>
+									<div class="travel-history__card-social p-normal">
+										<ul class="travel-history__card-social-list">
+											<li class="travel-history__card-social-item"><a href="#" class="travel-history__card-social-link">instagram</a> </li>
+											<li class="travel-history__card-social-item"><a href="#" class="travel-history__card-social-link">facebook</a> </li>
+											<li class="travel-history__card-social-item"><a href="#" class="travel-history__card-social-link">ВКонтакте</a> </li>
+										</ul>
+									</div>
 								</div>
 							</div>
+							
 						</div>
 
 					</div>
@@ -392,7 +408,7 @@
 
 		<footer class="footer">
 			<div class="footer__wrapper-top">
-				<div class="container container_margin-top  footer__top">
+				<div class="container container_padding-top  footer__top">
 					<div class="footer__inner-top">
 						<img src="../img/footer/footer photo.jpg" alt="footer photo" class="footer__img">
 						<div class="footer__text">

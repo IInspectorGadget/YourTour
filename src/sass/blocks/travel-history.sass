@@ -1,3 +1,5 @@
+
+    
 .travel-history
     &__container
         display: flex 
@@ -13,22 +15,26 @@
         width: 100%
         gap: 50px
     &__card
-        position: relative
         border-radius: 50px
         height: 567px
+        
+    &__inner
+        position: relative
         padding: 60px
+        height: 100%
         display: flex 
         flex-direction: column
         justify-content: space-between
         color: var(--white)
         pointer-events: none
-    
+
     @for $i from 1 through 3
-         &__card_#{$i}
+        &__card_#{$i}
             background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url('../img/story/story photo-#{$i}.jpg')
             background-position: center
             background-size: cover
 
+    
     &__card-title
         width: 554px
     
@@ -57,7 +63,9 @@
         padding-bottom: 2px
         &:hover
             border-bottom: 1px solid var(--white)
-            
+        &:active
+            color: var(--orange-200)
+            border-bottom: 1px solid var(--orange-200)
 
     &__card-detail
         display: flex 
@@ -78,13 +86,6 @@
             content: ""
             border-radius: 50px
             
-    &__card:hover .travel-history__card-detail
-        background: var(--green-400)
-
-    // &__card-detail-arrow
- 
-    
-
 
 
 @media (max-width: 1024px)
@@ -101,12 +102,14 @@
             width: 319px
 
         &__cards
-            margin-top: 49px
+            margin-top: 50px
             gap: 20px
         &__card
             height: 455px
-            padding: 30px 30px 31.5px 30px
             border-radius: 20px
+        &__inner
+            padding: 32px 30px 31.5px 30px
+
         &__card-title
             width: 160px
         &__card-list
@@ -129,3 +132,4 @@
         &__card-detail
             padding: 8px 19px
             margin: -8px -19px
+            gap: 17px

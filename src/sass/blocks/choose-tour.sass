@@ -13,15 +13,19 @@
         border-bottom: 2px solid transparent
         padding-bottom: 2px
         color: var(--black)
+        &:hover
+            cursor: pointer
+            border-bottom: 2px solid var(--black)
+    &__item-active
+        color: var(--orange-200)
+        &:hover
+            border-bottom: 2px solid var(--orange-200)
 
-    &__item:hover
-        cursor: pointer
-        border-bottom: 2px solid var(--black)
 
 .choose-tour__cards
     margin-top: 102px
     display: flex 
-    justify-content: center
+    justify-content: flex-start
     flex-wrap: wrap
     gap: 30px
     &-bottom 
@@ -33,6 +37,8 @@
         height: 531px
         width: 370px
         border-radius: 50px
+        overflow: hidden
+
         @for $i from 1 through 6
             &_#{$i}
                 background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%), url('../img/cards/card tour photo-#{$i}.jpg')
@@ -40,9 +46,9 @@
                 background-position: center
     
     &-inner
-        // position: relative
+        position: relative
         width: 100%
-        margin: 50px
+        padding: 50px
         display: flex 
         flex-direction: column 
         justify-content: space-between
@@ -98,7 +104,7 @@
         height: 318px
         border-radius: 20px
     .choose-tour__cards-inner
-        margin: 25px
+        padding: 25px
     .choose-tour__cards-link:hover
         background-color: inherit
     .choose-tour__cards-link
