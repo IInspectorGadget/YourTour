@@ -122,7 +122,7 @@ gulp.task('server:dev', function () {
 
 gulp.task('watch:dev', function () {
 	gulp.watch('./src/sass/**/*.sass', gulp.parallel('sass:dev'));
-	gulp.watch('./src/html/**/*.html', gulp.parallel('html:dev'));
+	gulp.watch('./src/index.html', gulp.parallel('html:dev'));
 	gulp.watch('./src/img/**/*', gulp.parallel('images:dev'));
 	gulp.watch('./src/fonts/**/*', gulp.parallel('fonts:dev'));
 	gulp.watch('./src/files/**/*', gulp.parallel('files:dev'));
