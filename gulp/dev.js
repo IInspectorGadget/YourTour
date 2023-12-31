@@ -68,8 +68,8 @@ gulp.task('sass:dev', function () {
 
 gulp.task('images:dev', function () {
 	return gulp
-		.src('./src/img/**/*')
-		.pipe(changed('./build/img/'))
+		.src('./src/assets/images/**/*')
+		.pipe(changed('./build/assets/images/'))
 		// .pipe(webp())
 		// .pipe(imagemin({ verbose: true }))
 		.pipe(plumber(plumberNotify('img')))
@@ -84,7 +84,7 @@ gulp.task('images:dev', function () {
 			imagemin.optipng(),
 			imagemin.svgo()
 		  ]))
-		.pipe(gulp.dest('./build/img/'));
+		.pipe(gulp.dest('./build/assets/images/'));
 });
 
 gulp.task('fonts:dev', function () {
