@@ -68,6 +68,7 @@ select
 
 .card
     position: relative
+    pointer-events: none
     overflow: hidden
     border-radius: 50px
     @media (max-width: 700px)
@@ -80,6 +81,7 @@ select
         left: 0
         animation: zoom-out 300ms ease forwards
     &-link
+        pointer-events: auto
         width: 0px
         height: 0px
         color: var(--white)
@@ -93,8 +95,12 @@ select
             content: ""
             z-index: 1
             border-radius: 50px
+    &:hover &-detail
+        background: var(--green-400)
+
     &-detail
         position: relative
+        pointer-events: auto
         z-index: 2
         display: flex 
         gap: 15px
@@ -105,10 +111,8 @@ select
         @media (max-width: 1024px)
             gap: 16px
     
-    &-detail
-        background: var(--green-400)
 
-    &-detail:active
+    &:hover &-detail:active 
         background: var(--orange-200)
 
 
