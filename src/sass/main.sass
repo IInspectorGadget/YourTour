@@ -1,8 +1,12 @@
 @import ./base/_reset
 @import ./base/variables
 @import ./base/fonts
+
+.webp1 
+    background-position: center
+    background-size: cover
 html 
-    scroll-behavior: smooth !important
+    scroll-behavior: smooth
 body
     background-color: var(--beige-100)
 
@@ -65,47 +69,49 @@ select
         transform: scale(1)
 
 .card
-    pointer-events: none
     position: relative
     overflow: hidden
-
+    border-radius: 50px
+    @media (max-width: 700px)
+        border-radius: 20px
     &-zoom
-        pointer-events: auto
         position: absolute
         width: 100%
         height: 100%
         top: 0
         left: 0
         animation: zoom-out 300ms ease forwards
-        border-radius: 50px
-        @media (max-width: 700px)
-            border-radius: 20px
-
-
+    &-link
+        width: 0px
+        height: 0px
+        color: var(--white)
+        &::before
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            content: ""
+            z-index: 1
+            border-radius: 50px
     &-detail
+        position: relative
+        z-index: 2
         display: flex 
         gap: 15px
         padding: 7px 20px
         margin: -7px -20px
         border-radius: 50px
+        cursor: pointer
         @media (max-width: 1024px)
             gap: 16px
-        &-link
-            color: var(--white)
-            pointer-events: auto
-            &::before
-                position: absolute
-                top: 0
-                left: 0
-                width: 100%
-                height: 100%
-                content: ""
-                border-radius: 50px
     
-    &:hover &-detail
+    &-detail
         background: var(--green-400)
-    &:active &-detail
+
+    &-detail:active
         background: var(--orange-200)
+
 
     &:hover &-zoom
         animation: zoom-in 300ms ease forwards

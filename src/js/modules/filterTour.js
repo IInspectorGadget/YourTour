@@ -1,6 +1,6 @@
 export const filterTour = () => {
     const categories = document.getElementsByClassName("choose-tour__item");
-    const cards = document.getElementsByClassName("choose-tour__cards-card");
+    const cards = document.getElementsByClassName("choose-tour__card-card");
     let enablesCategory = [];
     let enable_count = 0;
 

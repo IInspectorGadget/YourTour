@@ -10,7 +10,11 @@ const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
 const webpack = require('webpack-stream');
 const babel = require('gulp-babel');
+
 const imagemin = require('gulp-imagemin');
+const imgCompress  = require('imagemin-jpeg-recompress');
+const webp = require('gulp-webp');
+
 const changed = require('gulp-changed');
 
 gulp.task('clean:dev', function (done) {
@@ -66,7 +70,20 @@ gulp.task('images:dev', function () {
 	return gulp
 		.src('./src/img/**/*')
 		.pipe(changed('./build/img/'))
+		// .pipe(webp())
 		// .pipe(imagemin({ verbose: true }))
+		.pipe(plumber(plumberNotify('img')))
+		.pipe(imagemin([
+			imgCompress({
+			  loops: 4,
+			  min: 70,
+			  max: 80,
+			  quality: 'high'
+			}),
+			imagemin.gifsicle(),
+			imagemin.optipng(),
+			imagemin.svgo()
+		  ]))
 		.pipe(gulp.dest('./build/img/'));
 });
 

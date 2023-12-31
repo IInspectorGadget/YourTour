@@ -23,8 +23,10 @@ const webpack = require('webpack-stream');
 const babel = require('gulp-babel');
 const changed = require('gulp-changed');
 
+
 // Images
 const imagemin = require('gulp-imagemin');
+const pictureHTML = require("gulp-picture-html")
 const webp = require('gulp-webp');
 
 
@@ -53,14 +55,23 @@ const plumberNotify = (title) => {
 };
 
 gulp.task('html:dist', function () {
-	return gulp
-		.src(['./src/html/**/*.html', '!./src/html/blocks/*.html'])
-		.pipe(changed('./dist/'))
-		.pipe(plumber(plumberNotify('HTML')))
-		.pipe(fileInclude(fileIncludeSetting))
-		.pipe(webpHTML())
-		.pipe(htmlclean())
-		.pipe(gulp.dest('./dist/'));
+	return (
+		gulp
+			.src(['./src/html/**/*.html', '!./src/html/blocks/*.html'])
+			.pipe(changed('./dist/', { hasChanged: changed.compareContents }))
+			.pipe(plumber(plumberNotify('HTML')))
+			.pipe(fileInclude(fileIncludeSetting))
+			.pipe(pictureHTML(     
+				options= // below default
+				{
+				  extensions : ['.jpg'], // image file extensions for which we create 'picture'
+				  source : ['.webp'], // create 'source' with these formats   
+				  noPicture : ['no-sourse'],  // if we find this class for the 'img' tag, then we don't create a 'picture' (multiple classes can be set)
+				  noPictureDel : false // if 'true' remove classes for 'img' tag given in 'noSource:[]'
+				}
+			  ))
+			.pipe(gulp.dest('./dist/'))
+	);
 });
 
 gulp.task('sass:dist', function () {
@@ -71,9 +82,7 @@ gulp.task('sass:dist', function () {
 		.pipe(sourceMaps.init())
 		.pipe(sassGlob())
 		.pipe(sass())
-		.pipe(webpCss())
 		.pipe(groupMedia())
-		.pipe(csso())
 		.pipe(sourceMaps.write())
 		.pipe(gulp.dest('./dist/css/'))
 });
