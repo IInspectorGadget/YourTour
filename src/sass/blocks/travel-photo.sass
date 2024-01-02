@@ -29,7 +29,26 @@
         height: 301px
     &__item
         flex-grow: 0
+        overflow: hidden
+        border-radius: 50px
         flex-shrink: 1
+    
+    &__item_1 img, &__item_4 img
+        max-width: unset 
+        width: 113.049%
+        height: 100.488%
+        object-position: -29px 0px
+        object-fit: unset
+    &__item_9 img
+        max-width: unset 
+        width: 100%
+        height: 200%
+        object-position: 0px -159px
+        object-fit: unset
+    
+  
+
+
 
     &__item_width_25
         flex-basis: calc(442.5px * 100% / $container_max-width)
@@ -40,7 +59,6 @@
     &__img 
         width: 100%
         height: 100%
-        border-radius: 50px
         object-fit: cover
         object-position: center
 
@@ -55,6 +73,13 @@
                 gap: calc(30px * 100% / $list-height) 
             &__list-line
                 gap: calc(20px * 100% / $container_max-width)
+                
+            &__item_1 img , &__item_4 img
+                object-position: -21px 0px
+            &__item_9 img
+                object-fit: cover
+                object-position: center
+                height: 100%
 
 
             &__item_width_25
@@ -85,9 +110,11 @@
             &__list-line_bottom
                 gap: calc(10px * 100% / $container_max-width) 
 
-
-            &__img 
+            &__item
                 border-radius: 20px
+            
+            &__item_1 img , &__item_4 img
+                object-position: -10px 1px
 
             &__item_width_25
                 flex-basis: calc(150px * 100% / $container_max-width)

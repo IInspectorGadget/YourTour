@@ -1,6 +1,7 @@
 @import ./base/_reset
 @import ./base/variables
 @import ./base/fonts
+@import ./base/animation
 
 
 html 
@@ -53,18 +54,7 @@ select
     @media (max-width:360px )
         margin-top: 20px 
         
-@keyframes zoom-in
-    0%
-        transform: scale(1)
-    100%
-        transform: scale(1.2)
-            
-@keyframes zoom-out
-    0%
-        transform: scale(1.2)
 
-    100%
-        transform: scale(1)
 
 .card
     position: relative
@@ -79,7 +69,12 @@ select
         height: 100%
         top: 0
         left: 0
-        animation: zoom-out 300ms ease forwards
+        // animation: zoom-out 300ms ease forwards
+        transition: transform 300ms ease
+    &:hover &-zoom
+        // animation: zoom-in 300ms ease forwards
+        transform: scale(1.2)
+
     &-link
         pointer-events: auto
         width: 0px
@@ -108,16 +103,25 @@ select
         margin: -7px -20px
         border-radius: 50px
         cursor: pointer
+        align-items: center
+        transition: background 300ms ease
+
         @media (max-width: 1024px)
             gap: 16px
-    
+        
+
+    &-detail-arrow
+        width: 22px
+        height: 26px
+        object-fit: contain
+        object-position: center
+
 
     &:hover &-detail:active 
         background: var(--orange-200)
 
 
-    &:hover &-zoom
-        animation: zoom-in 300ms ease forwards
+    
 
 
 

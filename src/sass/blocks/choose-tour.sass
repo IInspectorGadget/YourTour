@@ -13,9 +13,10 @@
         border-bottom: 2px solid transparent
         padding-bottom: 2px
         color: var(--black)
+        transition: border-color 200ms ease, color 200ms ease
         &:hover
             cursor: pointer
-            border-bottom: 2px solid var(--black)
+            border-color: var(--black)
     &__item-active
         color: var(--orange-200)
         &:hover
@@ -93,4 +94,4 @@
         gap: 18px
     .choose-tour__card-detail
         padding: 7px 19px
-        margin: -5px -19px
+        margin: -7px -19px

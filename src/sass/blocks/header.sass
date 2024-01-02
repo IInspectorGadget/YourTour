@@ -8,6 +8,7 @@
         align-items: center
         justify-content: space-between
 
+
     &__wrapper-top
         position: absolute
         padding-top: 28.88px
@@ -22,13 +23,17 @@
         &-list
             display: flex 
             gap: 0px 50px
+        &-link 
+            transition: border-color 200ms ease
+            border-bottom: 1px solid transparent
         &-link:hover
-            border-bottom: 1px solid var(--white)
+            border-color: var(--white)
         &-link 
             color: var(--white)
+
     &__phone
         color: var(--white)
-        padding-bottom: 1px
+    
 
     &__bottom   
         padding-top: 208px
@@ -49,6 +54,8 @@
         border-radius: 10px
         padding: 5px 20px
         color: var(--black)
+        transition: color 200ms ease, background-color 300ms ease
+
         &:hover 
             background-color: var(--orange-200)
             color: var(--white)
@@ -93,6 +100,7 @@
         background-size: cover
         background-position: center
         height: 488px
+
         &__wrapper-top
             padding: 32.5px 0
         &__top
