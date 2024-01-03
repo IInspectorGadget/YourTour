@@ -68,7 +68,7 @@
       
 
 
-@media (max-width: 700px)
+@media (max-width: 720px)
     .travel-history
         &__subtitle
             width: 319px
@@ -80,22 +80,27 @@
             height: 455px
             border-radius: 20px
         &__inner
-            padding: 32px 30px 29.5px 30px
+            padding: 30px 30px 29.5px 30px
 
         &__card-title
-            width: 160px
+            width: clamp(160px, -14.625rem + 109.444vw, 554px)
         &__card-list
             margin-top: 23px
             margin-left: 24px
-
         &__card-item:marker
             height: 0px
         &__card-paragraph
-            width: 283px
+            width: clamp(283px, 0.75rem + 75.278vw, 554px)
             margin-top: 20px
         &__card-social
             display: none
-
-        
         &__card-detail
             gap: 17px
+
+// @media (max-width: 360px)
+//     .travel-history
+//         &__card-title
+//             width: 160px
+//         &__card-paragraph
+//             width: 283px
+//             margin-top: 20px
