@@ -2,6 +2,7 @@
 @import ./base/variables
 @import ./base/fonts
 @import ./base/animation
+@import ./base/components
 
 
 html 
@@ -18,110 +19,6 @@ select
 .unstyled-date::-webkit-calendar-picker-indicator 
     display: none
     -webkit-appearance: none
-
-
-.container
-    position: relative
-    max-width: calc(1170px + 60px)
-    width: 100%
-    margin: 0 auto
-    padding: 0 30px
-    &_padding-top
-        padding-top: 135px
-        @media (max-width: 720px)
-            padding-top: 76px
-    &_margin-top
-        margin-top: 135px
-        @media (max-width: 720px)
-            margin-top: 76px
-    @media (max-width:1024px )
-        padding-left: 20px
-        padding-right: 20px
-        max-width: calc(918px + 40px)
-    @media (max-width:360px )
-        padding-left: 21px
-        padding-right: 21px
-        max-width: calc(318px + 42px)
-
-.title
-    color: var(--black)
-    text-align: center
-    
-.subtitle
-    color: var(--gray-300)
-    margin-top: 30px
-    text-align: center
-    @media (max-width:360px )
-        margin-top: 20px 
-        
-
-
-.card
-    position: relative
-    pointer-events: none
-    overflow: hidden
-    border-radius: 50px
-    @media (max-width: 360px)
-        border-radius: 20px
-    &-zoom
-        position: absolute
-        width: 100%
-        height: 100%
-        top: 0
-        left: 0
-        // animation: zoom-out 300ms ease forwards
-        transition: transform 300ms ease
-    &:hover &-zoom
-        // animation: zoom-in 300ms ease forwards
-        transform: scale(1.2)
-
-    &-link
-        pointer-events: auto
-        width: 0px
-        height: 0px
-        color: var(--white)
-        display: contents
-        &::before
-            position: absolute
-            top: 0
-            left: 0
-            width: 100%
-            height: 100%
-            content: ""
-            z-index: 1
-            border-radius: 50px
-    &:hover &-detail
-        background: var(--green-400)
-
-    &-detail
-        position: relative
-        pointer-events: auto
-        z-index: 2
-        display: flex 
-        gap: 15px
-        padding: 7px 20px
-        margin: -7px -20px
-        border-radius: 50px
-        cursor: pointer
-        align-items: center
-        transition: background 300ms ease
-
-        @media (max-width: 1024px)
-            gap: 16px
-        
-
-    &-detail-arrow
-        width: 22px
-        height: 26px
-        object-fit: contain
-        object-position: center
-
-
-    &:hover &-detail:active 
-        background: var(--orange-200)
-
-
-    
 
 
 

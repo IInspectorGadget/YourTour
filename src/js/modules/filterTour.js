@@ -18,7 +18,7 @@ export const filterTour = () => {
             }
 
             for(let card of cards){
-                const type = card.getAttribute("data");
+                const type = card.getAttribute("data-type");
                 if (!enablesCategory.includes(type) && enable_count){
                     card.style.display = "none";
                 } else {
