@@ -38,9 +38,11 @@
         width: 554px
         margin-top: 37px
     &__card-list
-        margin-top: 29px
-        margin-left: 30px
-    &__card-item
+        margin-top: 28px
+        margin-left: 13px
+    &__card-item:before
+        content: "•"
+        padding-right: 10px
         list-style-type: disc
     &__card-links 
         display: flex
@@ -82,11 +84,12 @@
         &__inner
             padding: 30px 30px 29.5px 30px
 
+
         &__card-title
             width: clamp(160px, -14.625rem + 109.444vw, 554px)
         &__card-list
-            margin-top: 23px
-            margin-left: 24px
+            margin-top: 25px
+            margin-left: 10px
         &__card-item:marker
             height: 0px
         &__card-paragraph
