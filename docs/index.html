@@ -50,7 +50,7 @@
 					</ul>
 
 					<div class="choose-tour__cards">
-						<div class="choose-tour__card card" data-type="popular">
+						<div class="choose-tour__card card" data-id="1" data-type="popular rafting">
 							<div class="choose-tour__card_1 card-zoom"></div>
 							<a href="#" class="choose-tour__card-link card-link"></a>
 
@@ -68,7 +68,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="choose-tour__card card" data-type="popular">
+						<div class="choose-tour__card card" data-id="2" data-type="popular">
 							<div class="choose-tour__card_2 card-zoom"></div>
 							<a href="#" class="choose-tour__card-link card-link"></a>
 							<div class="choose-tour__card-inner">
@@ -84,7 +84,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="choose-tour__card card" data-type="copyright">
+						<div class="choose-tour__card card" data-id="3" data-type="popular copyright">
 							<div class="choose-tour__card_3 card-zoom"></div>
 							<a href="#" class="choose-tour__card-link card-link"></a>
 							<div class="choose-tour__card-inner">
@@ -100,7 +100,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="choose-tour__card card" data-type="rafting">
+						<div class="choose-tour__card card" data-id="4" data-type="popular rafting">
 							<div class="choose-tour__card_4 card-zoom"></div>
 							<a href="#" class="choose-tour__card-link card-link"></a>
 							<div class="choose-tour__card-inner">
@@ -116,7 +116,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="choose-tour__card card" data-type="cycling">
+						<div class="choose-tour__card card" data-id="5" data-type="popular cycling">
 							<div class="choose-tour__card_5 card-zoom"></div>
 							<a href="#" class="choose-tour__card-link card-link"></a>
 							<div class="choose-tour__card-inner">
@@ -132,7 +132,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="choose-tour__card card" data-type="cycling">
+						<div class="choose-tour__card card" data-id="6" data-type="popular cycling">
 							<div class="choose-tour__card_6 card-zoom"></div>
 							<a href="#" class="choose-tour__card-link card-link"></a>
 							<div class="choose-tour__card-inner">
@@ -204,12 +204,18 @@
 								<span class="collect-tour__label">Вам есть 18 лет?</span>
 								<div class="collect-tour__adult">
 									<div class="collect-tour__adult-item">
-										<input value="yes" id="yes" name="adult" type="radio" class="collect-tour__radio">
-										<label for="yes">Да</label>
+										<div class="collect-tour__radio-button">
+											<input value="yes" id="yes" name="adult" type="radio" class="collect-tour__radio">
+											<div value="yes" id="yes" name="adult" type="radio" class="collect-tour__radio-accent"></div>
+										</div>
+										<label for="yes" class="collect-tour__radio-label">Да</label>
 									</div>
 									<div class="collect-tour__adult-item">
-										<input value="no" id="no" name="adult" type="radio" class="collect-tour__radio">
-										<label for="no">Нет</label>
+										<div class="collect-tour__radio-button">
+											<input value="no" id="no" name="adult" type="radio" class="collect-tour__radio">
+											<div value="yes" id="yes" name="adult" type="radio" class="collect-tour__radio-accent"></div>
+										</div>
+										<label for="no" class="collect-tour__radio-label">Нет</label>
 									</div>
 								</div>
 							</div>
