@@ -25,7 +25,7 @@
         padding-left: 19px
     &__field
         background-color: var(--beige-100)
-        padding: 20.5px 20px
+        padding: 20.5px 20px 20.5px 19px
         color: #A6A6A6
         border: 1px solid var(--beige-200)
         gap: 10px 
@@ -197,18 +197,20 @@
 
 @media (max-width:720px)
     .collect-tour
+        &__adult
+            gap: 30px
         &__form 
             margin-top: 40px 
             border-radius: 30px
         &__fieldset
-            margin: 20px 20px 40px 20px
+            margin: 20px 20px 40px 21px
             gap: 30px
             flex-direction: column
         &__item
             width: 100%
 
         &__checkbox-label
-            padding-left:11px
+            padding-left:10px
             letter-spacing: -0.003em
         
         &__textarea
@@ -225,9 +227,9 @@
 
 
         &__field
-            padding: 11px 10px
+            padding: 11px 9px
         &__direction
-            padding: 12.5px 10px
+            padding: 13.5px 9px
         &__date
             padding: 10px 10px 10px 8px
 
@@ -239,7 +241,7 @@
             width: 20px
             height: 20px
         &__adult-item
-            align-items: flex-end
+            align-items: center
             gap: 10px
         &__license
             align-items: flex-start
