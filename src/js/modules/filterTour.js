@@ -14,7 +14,6 @@ export const filterTour = () => {
             }
             curCategory.classList.add("choose-tour__item-active");
             enablesCategory = filter;
-            console.log(enablesCategory);
             localStorage.setItem("filter", enablesCategory);
         }
 
