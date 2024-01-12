@@ -163,7 +163,7 @@
 
 							<div class="collect-tour__item">
 								<span class="collect-tour__label">Имя</span>
-								<input id="name" name="name" type="text" class="collect-tour__field" placeholder="Введите Ваше имя">
+								<input required autocomplete="on" id="name" name="name" type="text" class="collect-tour__field" placeholder="Введите Ваше имя">
 							</div>
 
 							<div class="collect-tour__item">
@@ -179,22 +179,22 @@
 							
 							<div class="collect-tour__item">
 								<span class="collect-tour__label">Email</span>
-								<input id="email" name="email" type="email" class="collect-tour__field" placeholder="example@mail.com">
+								<input required autocomplete="on" id="email" name="email" type="email" class="collect-tour__field" placeholder="example@mail.com">
 							</div>
 
 							<div class="collect-tour__item">
 								<span class="collect-tour__label">Телефон</span>
-								<input id="tel" name="tel" type="tel" class="collect-tour__field" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _">
+								<input required autocomplete="on" id="tel" name="tel" type="tel" class="collect-tour__field" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _">
 							</div>
 
 							<div class="collect-tour__item">
 								<span class="collect-tour__label p-normal">Дата от</span>
-								<input required  id="date-start" name="date-start" type="date" class="collect-tour__field collect-tour__date unstyled-date">
+								<input required id="date-start" name="date-start" type="date" class="collect-tour__field collect-tour__date unstyled-date">
 							</div>
 
 							<div class="collect-tour__item">
 								<span class="collect-tour__label">Дата до</span>
-								<input required  id="date-end" name="date-end" type="date" class="collect-tour__field collect-tour__date  unstyled-date">
+								<input required id="date-end" name="date-end" type="date" class="collect-tour__field collect-tour__date  unstyled-date">
 							</div>
 
 							<div class="collect-tour__item collect-tour__item_full">
@@ -204,7 +204,7 @@
 
 							<div class="collect-tour__item collect-tour__item_full">
 								<span class="collect-tour__label">Вам есть 18 лет?</span>
-								<div class="collect-tour__adult">
+								<div class="collect-tour__adult" required>
 									<div class="collect-tour__adult-item">
 										<div class="collect-tour__radio-button">
 											<input value="yes" id="yes" name="adult" type="radio" class="collect-tour__radio">
@@ -225,7 +225,7 @@
 							<div class="collect-tour__item collect-tour__item_full">
 								<div class="collect-tour__license">
 									<div class="collect-tour__checkbox-wrapper">
-										<input id="license" name="license" type="checkbox" class="collect-tour__checkbox unstyled-date">
+										<input required id="license" name="license" type="checkbox" class="collect-tour__checkbox unstyled-date">
 									</div>
 									<label for="license" class="collect-tour__license-label text-grey collect-tour__checkbox-label p-small">Нажимая кнопку, я принимаю условия <a href="#" class="collect-tour__license-link">Лицензионного договора</a></label>
 								</div>
@@ -234,11 +234,10 @@
 							<div class="collect-tour__item collect-tour__item_full">
 								<div class="collect-tour__buttons">
 									<button class="collect-tour__button collect-tour__button_find p-normal">Найти тур</button>
-									<button class="collect-tour__button collect-tour__button_reset p-normal">Сбросить</button>
+									<button class="collect-tour__button collect-tour__button_reset p-normal" onclick="reset()">Сбросить</button>
 								</div>
 							</div>
 
-							
 						</form>
 					</div>
 				</div>
