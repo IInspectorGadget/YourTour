@@ -26,17 +26,22 @@
     &__field
         background-color: var(--beige-100)
         padding: 20.5px 20px 20.5px 19px
-        color: #A6A6A6
+        color: var(--black)
         border: 1px solid var(--beige-200)
         gap: 10px 
         border-radius: 10px
         cursor: pointer
         outline:0px
         transition: background-color 200ms ease, border-color 200ms ease
+        color-scheme: var(--gray-300)
         &:hover
             background-color: var(--beige-200)
         &:focus
             border-color: var(--gray-300)
+        &::placeholder
+            color: var(--gray-300)
+   
+            
     &__textarea
         resize: none
         overflow: hidden 
@@ -44,6 +49,8 @@
         height: 152px
     &__date
         text-transform: uppercase
+        &:invalid
+            color: var(--gray-300)
     &__radio
         position: absolute
         width: 100%
@@ -112,6 +119,8 @@
             background: url("../assets/images/icons/rectangle.svg")
             background-repeat: no-repeat
             background-position: center
+            pointer-events: none
+
 
     &__buttons
         display: flex 
@@ -145,8 +154,13 @@
         flex-wrap: wrap
         gap: 33px 30px
         margin: 70px
-            
-        
+    &__direction
+        &:invalid
+            color: var(--gray-300) 
+    &__option
+        color: var(--black)
+        &:disabled
+            color: var(--gray-300)
 
     &__adult
         display: flex
@@ -228,8 +242,11 @@
 
         &__field
             padding: 11px 9px
+
         &__direction
             padding: 13.5px 9px
+
+            
         &__date
             padding: 10px 10px 10px 8px
 
@@ -237,6 +254,8 @@
             &::after
                 top: calc(50% - 12px)
                 right: 10px
+
+  
         &__radio-button
             width: 20px
             height: 20px

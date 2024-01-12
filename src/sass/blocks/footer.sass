@@ -67,12 +67,21 @@
         display: flex
         gap: 10px
         align-items: center
+        position: relative
+    
     &__icon
         object-position: center
         object-fit: none
         height: 26px
         width: 26px
 
+    &__link::before 
+        left:0 
+        right: 0
+        top: 0
+        bottom: 0
+        position: absolute 
+        content: ""
     
 @media (max-width: 1024px)
     .footer

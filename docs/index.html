@@ -17,7 +17,9 @@
 		<header class="header">
 			<div class="header__wrapper-top ">
 				<div class="container header__top  p-normal">
-					<img class="header__logo" src="assets/images/header/YourTour.svg" alt="logo">
+					<a href="#" class="header__link">
+						<img class="header__logo" src="assets/images/header/YourTour.svg" alt="logo">
+					</a>
 					<nav class="header__nav">
 						<ul class="header__nav-list ">
 							<li class="header__nav-item"><a href="#choose-tour" class="header__nav-link">Туры</a></li>
@@ -167,8 +169,8 @@
 							<div class="collect-tour__item">
 								<span class="collect-tour__label">Направление</span>
 								<div class="collect-tour__select-wrapper">
-									<select id="direction" name="direction" class="collect-tour__field collect-tour__direction">
-										<option class="collect-tour__option" value="" disabled selected>Куда хотите ехать</option>
+									<select required id="direction" name="direction" class="collect-tour__field collect-tour__direction">
+										<option class="collect-tour__option" disabled value="" selected>Куда хотите ехать</option>
 										<option class="collect-tour__option" value="2">Путешествие в горы</option>
 										<option class="collect-tour__option" value="2">Путешествие в горы</option>
 									</select>
@@ -187,12 +189,12 @@
 
 							<div class="collect-tour__item">
 								<span class="collect-tour__label p-normal">Дата от</span>
-								<input id="date-start" name="date-start" type="date" class="collect-tour__field collect-tour__date unstyled-date">
+								<input required  id="date-start" name="date-start" type="date" class="collect-tour__field collect-tour__date unstyled-date">
 							</div>
 
 							<div class="collect-tour__item">
 								<span class="collect-tour__label">Дата до</span>
-								<input id="date-end" name="date-end" type="date" class="collect-tour__field collect-tour__date  unstyled-date">
+								<input required  id="date-end" name="date-end" type="date" class="collect-tour__field collect-tour__date  unstyled-date">
 							</div>
 
 							<div class="collect-tour__item collect-tour__item_full">
