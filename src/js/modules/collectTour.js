@@ -8,27 +8,26 @@ export const  collectTour = () => {
             return input.value.replace(numberReg, '');
         }
         
-        const updateText = (inputNumbersValue, input) =>{
+        const updateText = (inputNumbersValue) =>{
             let formattedInputValue = "";
-            if (["7", "8", "9"].indexOf(inputNumbersValue[0]) > -1) {
+            if (inputNumbersValue[0] === "9" || inputNumbersValue[0] === "7") {
                 if (inputNumbersValue[0] == "9") inputNumbersValue = "7" + inputNumbersValue;
-                let firstSymbols = (inputNumbersValue[0] == "8") ? "8" : "+ 7";
-                formattedInputValue = input.value = firstSymbols + " ";
-                if (inputNumbersValue.length > 1) {
-                    formattedInputValue += '(' + inputNumbersValue.substring(1, 4);
+                formattedInputValue =  "+ 7 ";
+
+                const cases = [
+                    { length: 1, start: 1, end: 4, separator: '(' },
+                    { length: 5, start: 4, end: 7, separator: ') ' },
+                    { length: 8, start: 7, end: 9, separator: '-' },
+                    { length: 10, start: 9, end: 11, separator: '-' }
+                ];
+        
+                for (const { length, start, end, separator } of cases) {
+                    if (inputNumbersValue.length >= length) {
+                        formattedInputValue += separator + inputNumbersValue.substring(start, end);
+                    }
                 }
-                if (inputNumbersValue.length >= 5) {
-                    formattedInputValue += ') ' + inputNumbersValue.substring(4, 7);
-                }
-                if (inputNumbersValue.length >= 8) {
-                    formattedInputValue += '-' + inputNumbersValue.substring(7, 9);
-                }
-                if (inputNumbersValue.length >= 10) {
-                    formattedInputValue += '-' + inputNumbersValue.substring(9, 11);
-                }
-            } else {
-                formattedInputValue = '+ ' + inputNumbersValue.substring(0, 16);
-            }
+
+            } 
             return formattedInputValue
         }
 
@@ -41,17 +40,15 @@ export const  collectTour = () => {
 
             // Change characters in the middle of text
             if (input.value.length != selectionStart) {
-                    //We make changes if the input is correct and change the cursor location
-                    if (e.data && numberReg.test(e.data)) {
-                        input.value = updateText(inputNumbersValue, input);
-                        input.selectionEnd= selectionStart - 1
-                        input.selectionStart= selectionStart -1
-                    }
-                    input.value = updateText(inputNumbersValue, input);
-                    return 
-            
+                //We make changes if the input is correct and change the cursor location
+                if (e.data && numberReg.test(e.data)) {
+                    input.value = updateText(inputNumbersValue);
+                    input.selectionEnd= selectionStart - 1
+                    input.selectionStart= selectionStart -1
+                }
+                input.value = updateText(inputNumbersValue);
+                return 
             }
-            
             
             input.value = updateText(inputNumbersValue, input);
 
@@ -66,16 +63,15 @@ export const  collectTour = () => {
             }
         }
 
+        // handling the case of text cutting so that the appearance does not change
         const onPhoneCut = (e) => {
             setTimeout(()=>{
                 const input = e.target
                 const inputNumbersValue = getInputNumbersValue(input)
                 const selectionStart = input.selectionStart
                 const selectionEnd = input.selectionStart
-                console.log(inputNumbersValue)
                 if (!inputNumbersValue)  return input.value = "";
                 input.value = updateText(inputNumbersValue, input);
-                console.log(selectionStart)
                 input.selectionStart = selectionEnd
                 input.selectionEnd = selectionEnd
             }, 0)
