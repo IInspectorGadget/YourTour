@@ -4,186 +4,235 @@
         justify-content: center
         align-items: center
         flex-direction: column
-    
+
     &__subtitle
         max-width: 409px
+
     &__form
-        background-color: var(--white)
         width: 100%
         margin-top: 100px
+
+        background-color: var(--white)
         border-radius: 50px
+
     &__item
-        width: calc(50% - 15px)
-        display: flex 
+        display: flex
         flex-direction: column
         gap: 8px
+
+        width: calc(50% - 15px)
+
         &_full
             width: 100%
-        
-        
+
     &__checkbox-label
         padding-left: 19px
+
     &__field
-        background-color: var(--beige-100)
+        gap: 10px
+
         padding: 20.5px 20px 20.5px 19px
+
         color: var(--black)
+        background-color: var(--beige-100)
         border: 1px solid var(--beige-200)
-        gap: 10px 
         border-radius: 10px
-        cursor: pointer
-        outline:0px
-        transition: background-color 200ms ease, border-color 200ms ease
         color-scheme: var(--gray-300)
+        outline: 0px
+        cursor: pointer
+
+        transition: background-color 200ms ease, border-color 200ms ease
+
         &:hover
             background-color: var(--beige-200)
+
         &:focus
             border-color: var(--gray-300)
+
         &::placeholder
             color: var(--gray-300)
-   
-            
+
     &__textarea
-        resize: none
-        overflow: hidden 
+        overflow: hidden
         width: 100%
-        height: 152px
+        min-height: 152px
+        resize: vertical
+
     &__date
         text-transform: uppercase
+
         &:invalid
             color: var(--gray-300)
+
     &__radio
         position: absolute
+
         width: 100%
         height: 100%
         visibility: hidden
-        //preload
+
         background-image: url("../assets/images/icons/radiobuttonOn.svg")
+
     &__radio-button
         position: relative
+
         width: 26px
         height: 26px
+
     &__radio-accent
         position: absolute
+
         width: 100%
         height: 100%
+
         background-image: url("../assets/images/icons/radiobutton.svg")
-        background-position: center 
+        background-position: center
         background-size: cover
+
     &__radio:checked + &__radio-accent
         background-image: url("../assets/images/icons/radiobuttonOn.svg")
 
-
-
     &__radio-label::before
-        position: absolute
         content: ""
-        top:0
-        bottom:0
+
+        position: absolute
+        top: 0
+        bottom: 0
+
         width: 100%
         inset-block: 0
         inset-inline: 0
-    
+
 
     &__checkbox
+        width: 26px
+        height: 26px
+
         -webkit-appearance: none
         -moz-appearance: none
         appearance: none
-        width: 26px
-        height: 26px
         border: 2px solid #1B1F2B
-        cursor: pointer
         border-radius: 5px
+        cursor: pointer
+
         &:checked::before
             content: ""
+
             position: absolute
             left: 0
             top: 0
+
             width: 26px
             height: 26px
+
             background-image: url("../assets/images/icons/reactangleForm.svg")
             background-repeat: no-repeat
-            background-position: center    
+            background-position: center
 
     &__select-wrapper
-        display: grid
         position: relative
+
+        display: grid
+
         &::after
+            content: ""
+            
+            position: absolute
             top: calc(50% - 13px)
             right: 20px
+
             width: 26px
             height: 26px
-            position: absolute
-            cursor: pointer
-            content: ""
+
             border-radius: 50px
             background: url("../assets/images/icons/rectangle.svg")
             background-repeat: no-repeat
             background-position: center
+            cursor: pointer
+
             pointer-events: none
 
-
     &__buttons
-        display: flex 
+        display: flex
         gap: 30px
         flex-wrap: wrap
+
     &__button
         border-radius: 10px
         cursor: pointer
+
         transition: background-color 200ms ease
+
     &__button_find
         padding: 15px 70.5px
-        background-color: var(--green-400)
+
         color: #fff
+        background-color: var(--green-400)
+
         &:hover
             background-color: var(--green-300)
-        &:active 
+
+        &:active
             background-color: var(--green-200)
 
-    &__button_reset 
+    &__button_reset
         padding: 15px 73px
-        background-color: var(--green-100)
+
         color: var(--green-400)
+        background-color: var(--green-100)
+
         &:hover
             background-color: var(--gray-100)
+
         &:active
             background-color: var(--gray-200)
 
     &__fieldset
-        display: flex 
+        display: flex
         justify-content: space-between
         flex-wrap: wrap
         gap: 33px 30px
         margin: 70px
+
     &__direction
         &:invalid
-            color: var(--gray-300) 
+            color: var(--gray-300)
+
     &__option
         color: var(--black)
+
         &:disabled
             color: var(--gray-300)
 
     &__adult
         display: flex
         gap: 31px
-        &-item 
-            display: flex
+
+        &-item
             position: relative
-            gap: 11px
+
+            display: flex
             align-items: center
+            gap: 11px
 
     &__license
         display: flex
         align-items: center
+
         line-height: 0
 
     &__license-label
         color: var(--gray-300)
+
     &__license-link
         color: var(--black)
         border-bottom: 1px solid transparent
+
         transition: border-color 200ms ease, color 200ms ease
+
         &:hover
             border-color: var(--black)
+
         &:active
             color: var(--green-400)
             border-color: var(--green-400)
@@ -193,52 +242,61 @@
 
     &__date
         padding: 20.5px 20px 20.5px 18px
+
         letter-spacing: -0.03em
-
-
 
 @media (max-width:1024px )
     .collect-tour
         &__fieldset
-            margin: 60px 
             gap: 33px 20px
+            margin: 60px
+
         &__item
             width: calc(50% - 10px)
+
             &_full
                 width: 100%
+
         &__checkbox-label
-            padding-left:11px
+            padding-left: 11px
 
 @media (max-width:720px)
     .collect-tour
         &__adult
             gap: 30px
-        &__form 
-            margin-top: 40px 
+
+        &__form
+            margin-top: 40px
+
             border-radius: 30px
+
         &__fieldset
+            flex-direction: column
             margin: 20px 20px 40px 21px
             gap: 30px
-            flex-direction: column
+
         &__item
             width: 100%
 
         &__checkbox-label
-            padding-left:10px
+            padding-left: 10px
+
             letter-spacing: -0.003em
-        
+
         &__textarea
             height: 132px
 
         &__buttons
             gap: 10px
+
         &__button
             line-height: 17px
+
         &__button_find
             padding: 15px 29.7px
-        &__button_reset 
-            padding: 15px 31.3px
 
+        &__button_reset
+            padding: 15px 31.3px
 
         &__field
             padding: 11px 9px
@@ -246,7 +304,6 @@
         &__direction
             padding: 13.5px 9px
 
-            
         &__date
             padding: 10px 10px 10px 8px
 
@@ -255,19 +312,21 @@
                 top: calc(50% - 12px)
                 right: 10px
 
-  
         &__radio-button
             width: 20px
             height: 20px
+
         &__adult-item
             align-items: center
             gap: 10px
+
         &__license
             align-items: flex-start
 
         &__checkbox
             width: 20px
             height: 20px
+
             &:checked::before
                 width: 20px
                 height: 20px

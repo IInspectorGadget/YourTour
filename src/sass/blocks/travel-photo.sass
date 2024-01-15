@@ -1,51 +1,55 @@
 .travel-photo
-    
     $container_max-width: 1860px
     $list-height: 963px
 
     &__container
-        display: flex 
+        display: flex
         flex-direction: column
         align-items: center
         max-width: calc($container_max-width + 60px)
+
         text-align: center
+
     &__subtitle
         width: 418px
 
-    
     &__list
-        height: $list-height
-        margin-top: 100px
-        display: flex 
-        flex-direction: column
-        gap: calc(30px * 100% / $list-height) 
-        width: 100%
-        
-
-    &__list-line 
         display: flex
-        gap: calc(30px * 100% / $container_max-width) 
+        flex-direction: column
+        gap: calc(30px * 100% / $list-height)
+        height: $list-height
+        width: 100%
+        margin-top: 100px
+
+    &__list-line
+        display: flex
         justify-content: center
+        gap: calc(30px * 100% / $container_max-width)
         height: 301px
+
     &__item
-        flex-grow: 0
         overflow: hidden
-        border-radius: 50px
+
+        flex-grow: 0
         flex-shrink: 1
-    
+
+        border-radius: 50px
+
     &__item_1 img, &__item_4 img
-        max-width: unset 
+        max-width: unset
         width: 113.049%
         height: 100.488%
+
         object-position: -29px 0px
         object-fit: unset
+
     &__item_9 img
-        max-width: unset 
+        max-width: unset
         width: 100%
         height: 200%
+
         object-position: 0px -159px
         object-fit: unset
-    
 
     &__item_width_25
         flex-basis: calc(442.5px * 100% / $container_max-width)
@@ -53,106 +57,121 @@
     &__item_width_2
         flex-basis: calc(347.998px * 100% / $container_max-width)
 
-    &__img 
+    &__img
         width: 100%
         height: 100%
+
         object-fit: cover
         object-position: center
 
-    
 @media (max-width: 1024px)
-    .travel-photo  
+    .travel-photo
         $container_max-width: 984px
         $list-height: 963px
+
         &__container
             max-width: calc($container_max-width + 40px)
+
         &__list
-            gap: calc(30px * 100% / $list-height) 
+            gap: calc(30px * 100% / $list-height)
+
         &__list-line
             gap: calc(20px * 100% / $container_max-width)
-            
+
         &__item_1 img , &__item_4 img
             object-position: -21px 0px
+
         &__item_9 img
-            object-fit: cover
-            object-position: center
             height: 100%
 
+            object-fit: cover
+            object-position: center
 
         &__item_width_25
             flex-basis: calc(314.67px * 100% / $container_max-width)
+
         &__item_width_2
             flex-basis: calc(231px * 100% / $container_max-width)
-            
+
         &__item_2, &__item_7, &__item_13
             display: none
-            
+
 @media (max-width: 720px)
-    .travel-photo  
+    .travel-photo
         $container_max-width: 500px
         $list-height: 366px
+
         &__subtitle
             width: 100%
+
         &__container
             max-width: calc($container_max-width + 42px)
+
         &__list
-            margin-top: 50px
-            height: $list-height
             gap: calc(18px * 100% / $list-height)
+            height: $list-height
+            margin-top: 50px
 
         &__list-line
+            gap: calc(18px * 100% / $container_max-width)
             height: 110px
-            gap: calc(18px * 100% / $container_max-width) 
+            
         &__list-line_middle, &__list-line_bottom
-            gap: calc(10px * 100% / $container_max-width) 
+            gap: calc(10px * 100% / $container_max-width)
 
         &__item
             border-radius: 20px
-        
+
         &__item_1 img , &__item_4 img
             object-position: -10px 1px
 
         &__item_width_25
             flex-basis: calc(150px * 100% / $container_max-width)
+
         &__item_width_2
             flex-basis: calc(99.33px * 100% / $container_max-width)
-        
+
         &__item_10, &__item_11
             flex-basis: calc(154px * 100% / $container_max-width)
 
-      
-
 @media (max-width: 520px)
-    .travel-photo  
+    .travel-photo
         $container_max-width: 318px
         $list-height: 366px
+        
         &__subtitle
             width: 100%
+
         &__container
             max-width: calc($container_max-width + 42px)
+
         &__list
-            margin-top: 49px
+            gap: calc(18px * 100% / $list-height)
             height: $list-height
-            gap: calc(18px * 100% / $list-height)  
+            margin-top: 49px
+
         &__list-line
+            gap: calc(18px * 100% / $container_max-width)
             height: 110px
-            gap: calc(18px * 100% / $container_max-width) 
+
         &__list-line_middle
-            gap: calc(10px * 100% / $container_max-width) 
+            gap: calc(10px * 100% / $container_max-width)
+
         &__list-line_bottom
-            gap: calc(10px * 100% / $container_max-width) 
+            gap: calc(10px * 100% / $container_max-width)
 
         &__item
             border-radius: 20px
-        
+
         &__item_1 img , &__item_4 img
             object-position: -10px 1px
 
         &__item_width_25
             flex-basis: calc(150px * 100% / $container_max-width)
+            
         &__item_width_2
             flex-basis: calc(99.33px * 100% / $container_max-width)
-        
+
         &__item_10, &__item_11
             flex-basis: calc(154px * 100% / $container_max-width)
 

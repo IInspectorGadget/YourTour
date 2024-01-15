@@ -1,88 +1,103 @@
 .footer
     &__top
-        display: flex 
+        display: flex
         flex-direction: column
-        align-items: center 
+        align-items: center
+
     &__inner-top
-        display: flex   
+        display: flex
         align-items: center
         gap: 30px
         max-width: 771px
+
     &__img
         width: 370px
         height: 370px
+
         border-radius: 50px
         object-fit: cover
         object-position: center
+
     &__text
-        display: flex 
+        display: flex
         flex-direction: column
         gap: 20px
-    &__title 
+
+    &__title
         color: var(--black)
+
     &__subtitle
         color: var(--gray-300)
+
     &__email
         color: var(--black)
-        border-bottom: 1px solid transparent 
+        border-bottom: 1px solid transparent
+
         transition: border-color 200ms ease, color 200ms ease
-        &:hover 
+
+        &:hover
             border-color: var(--black)
+
         &:focus
             color: var(--green-400)
             border-color: var(--green-400)
 
-
     &__wrapper-bottom
         height: 88px
+
         background-color: var(--beige-200)
+
     &__bottom
         height: 100%
+
     &__inner-bottom
-        display: flex 
+        display: flex
         align-items: center
         justify-content: space-between
         height: 100%
         max-width: 1168px
+
     &__bottom-paragraph
         color: var(--gray-300)
+
     &__list
-        display: flex 
+        display: flex
         gap: 25px
-        
-        
-    
-    
 
     &__link
         color: var(--black)
         border-bottom: 1px solid transparent
         border-top: 1px solid transparent
+
         transition: border-bottom 200ms ease
-        &:hover 
+
+        &:hover
             border-bottom: 1px solid var(--black)
 
-            
     &__item
+        position: relative
+
         display: flex
         gap: 10px
         align-items: center
-        position: relative
-    
+
     &__icon
-        object-position: center
-        object-fit: none
         height: 26px
         width: 26px
 
-    &__link::before 
-        left:0 
+        object-position: center
+        object-fit: none
+
+    &__link::before
+        content: ""
+        
+        position: absolute
+        left: 0
         right: 0
         top: 0
         bottom: 0
-        position: absolute 
-        content: ""
-    
+
+
 @media (max-width: 1024px)
     .footer
         &__list
@@ -92,32 +107,43 @@
     .footer
         &__inner-top
             flex-direction: column
+
         &__text
             text-align: center
             align-items: center
+
         &__inner-bottom
             flex-direction: column
-            text-align: center
             justify-content: center
             gap: 7px
+
+            text-align: center
 
 @media (max-width: 360px)
     .footer
         &__top
             padding-top: 75px
+
         &__subtitle
             max-width: 291px
+
             text-align: center
+
         &__wrapper-bottom
             height: 95px
+
         &__img
             width: 130px
             height: 133px
+
             border-radius: 20px
+
         &__list
             gap: 15px
+
         &__item
             gap: 5px
+
         &__icon
             width: 21px
             height: 21px

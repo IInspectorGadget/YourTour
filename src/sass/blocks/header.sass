@@ -1,122 +1,141 @@
 .header
     width: 100%
+
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(../assets/images/header/header-main.jpg)
     background-size: cover
     background-position: center
+
     &__top
         display: flex
         align-items: center
         justify-content: space-between
 
-
     &__wrapper-top
         position: absolute
-        padding-top: 28.88px
-        padding-bottom: 28.88px
         top: 0
         left: 0
         right: 0
         z-index: 10
 
+        padding-top: 28.88px
+        padding-bottom: 28.88px
 
     &__nav
         &-list
-            display: flex 
+            display: flex
             gap: 0px 50px
-        &-link 
-            transition: border-color 200ms ease
+            
+        &-link
             border-bottom: 1px solid transparent
+
+            transition: border-color 200ms ease
+
         &-link:hover
             border-color: var(--white)
-        &-link 
+
+        &-link
             color: var(--white)
 
     &__phone
         color: var(--white)
-    
 
-    &__bottom   
-        padding-top: 208px
-        padding-bottom: 119px
+    &__bottom
         display: flex
         flex-direction: column
         align-items: center
-        text-align: center
         gap: 50px 0
+        padding-top: 208px
+        padding-bottom: 119px
+
+        text-align: center
+
     &__title
         max-width: 768px
+
         color: var(--white)
+
     &__subtitle
         max-width: 562px
+
         color: var(--white)
+
     &__button
+        padding: 5px 20px
+
+        color: var(--black)
         background-color: var(--white)
         border-radius: 10px
-        padding: 5px 20px
-        color: var(--black)
+
         transition: color 200ms ease, background-color 300ms ease
 
-        &:hover 
-            background-color: var(--orange-200)
+        &:hover
             color: var(--white)
+            background-color: var(--orange-200)
+
         &:active
-            background-color: var(--orange-100)
             color: var(--black)
-
-
+            background-color: var(--orange-100)
 
     &__wrapper-top-fixed
         position: fixed
+
         background-color: #F3EFE899
         backdrop-filter: blur(54px)
+        
     &__wrapper-top-fixed &__nav-link, &__wrapper-top-fixed &__phone
         color: var(--black)
+
         &:hover
             border-bottom: 1px solid var(--black)
+
     &__wrapper-top-fixed  &__logo
         filter: brightness(0) saturate(100%) invert(7%) sepia(33%) saturate(882%) hue-rotate(188deg) brightness(91%) contrast(88%)
-        
-
 
 @media (max-width: 1024px)
     .header
         &__top
             padding: 0 24px
+
         &__subtitle
             max-width: 442px
+
         &__nav
             &-list
                 gap: 0 30px
-
 
 @media (max-width: 850px)
     .header__nav
         display: none
 
-
 @media (max-width: 720px)
     .header
+        height: 488px
+
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(../assets/images/header/header-main_mobile.jpg)
         background-size: cover
         background-position: center
-        height: 488px
 
         &__wrapper-top
             padding: 32.5px 0
+
         &__top
             padding: 0px 20px
+
         &__logo
             width: 134px
             height: 23px
+
         &__background
             height: 488px
+
         &__subtitle
             max-width: 310px
+            
         &__bottom
             gap: 40px 0
             padding-top: 140px
             padding-bottom: 52px
-            
+
         &__nav
             &-list
                 gap: 0 30px

@@ -1,46 +1,56 @@
 .reviews
     &__container
-        display: flex 
+        display: flex
         flex-direction: column
         align-items: center
-    &__title 
-        text-align: center
+
+    &__title
         width: 529px
+
+        text-align: center
+
     &__subtitle
         width: 418px
+
     &__list
-        margin-top: 100px
-        display: flex 
+        display: flex
         flex-wrap: nowrap
         justify-content: space-between
         gap: 30px
-    
+        margin-top: 100px
+
     &__item
-        display: flex 
+        display: flex
         flex-direction: column
         flex: 0 1 50%
-        padding: 40px
-        background-color: var(--beige-200)
-        border-radius: 50px
         justify-content: space-between
+        padding: 40px
+
+        border-radius: 50px
+        background-color: var(--beige-200)
+
     &__text
         max-height: 448px
-        overflow-y: auto 
+        overflow-y: auto
+
         &::-webkit-scrollbar
             width: 0px
     &__footer
-        padding-top: 70px
-        display: flex 
+        display: flex
         justify-content: space-between
         align-items: center
+        padding-top: 70px
+
     &__footer-img
         width: 75px
         height: 75px
+
         border-radius: 100px
     &__footer-text
-        display: flex 
+        display: flex
         flex-direction: column
         gap: 8px
+
     &__tour-name
         color: var(--gray-300)
 
@@ -48,30 +58,41 @@
     .reviews
         &__list
             gap: 18px
+
         &__text
             max-height: 616px
+
 @media (max-width: 720px)
     .reviews
         &__list
+            flex-direction: column
             gap: 19px
             margin-top: 51px
-            flex-direction: column
+
         &__item
-            border-radius: 20px
             padding: 19px 21px 20px 20px
+
+            border-radius: 20px
+
         &__text
+            max-height: 437px
+
             padding-right: 1px
             padding-left: 1px
-            max-height: 437px
+
         &__footer
-            padding-left: 1px
-            padding-top: 40px
             align-items: flex-end
             gap: 9px
+            padding-left: 1px
+            padding-top: 40px
+
         &__paragraph
             line-height: 23px
-        &__title 
-            text-align: center
+
+        &__title
             width: 318px
+
+            text-align: center
+
         &__subtitle
             width: 318px

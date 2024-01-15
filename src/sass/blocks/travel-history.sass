@@ -1,28 +1,34 @@
 .travel-history
     &__container
-        display: flex 
+        display: flex
         flex-direction: column
         align-items: center
         justify-content: center
-    &__subtitle 
+
+    &__subtitle
         width: 418px
+
     &__cards
-        margin-top: 100px
-        display: flex 
+        display: flex
         flex-direction: column
-        width: 100%
         gap: 50px
+        width: 100%
+        margin-top: 100px
+
     &__card
-        border-radius: 50px
         height: 567px
-        
+
+        border-radius: 50px
+
     &__inner
         position: relative
-        padding: 60px
-        height: 100%
-        display: flex 
+
+        display: flex
         flex-direction: column
         justify-content: space-between
+        height: 100%
+        padding: 60px
+
         color: var(--white)
 
     @for $i from 1 through 3
@@ -31,44 +37,52 @@
             background-position: center
             background-size: cover
 
-    
     &__card-title
         width: 554px
+
     &__card-paragraph
         width: 554px
         margin-top: 37px
+
     &__card-list
         margin-top: 28px
         margin-left: 12px
+
     &__card-item:before
         content: "•"
+
         padding-right: 11px
         list-style-type: disc
-    &__card-links 
+
+    &__card-links
         display: flex
         justify-content: space-between
         align-items: center
+
     &__card-social-list
         display: flex
         gap: 36px
+
     &__card-social-link
-        pointer-events: auto
         position: relative
         z-index: 10
+
+        padding-bottom: 2px
+
         color: var(--white)
         border-bottom: 1px solid transparent
-        padding-bottom: 2px
+
         transition: border-color 200ms ease, color 200ms ease
+        pointer-events: auto
+
         &:hover
             border-color: var(--white)
         &:active
             color: var(--orange-200)
             border-color: var(--orange-200)
-    
+
     &__card-detail-link
         color: var(--white)
-      
-
 
 @media (max-width: 720px)
     .travel-history
@@ -76,38 +90,39 @@
             width: 319px
 
         &__cards
-            margin-top: 50px
             gap: 20px
+            margin-top: 50px
+
         &__card
             height: 455px
+
             border-radius: 20px
         &__inner
             padding: 30px 30px 29.5px 31px
 
-
         &__card-title
             width: clamp(160px, -14.625rem + 109.444vw, 554px)
+
         &__card-list
             margin-top: 24px
             margin-left: 9px
+
         &__card-item:before
             content: "•"
+
             padding-right: 10px
+
             list-style-type: disc
+
         &__card-item:marker
             height: 0px
+
         &__card-paragraph
             width: clamp(283px, 0.75rem + 75.278vw, 554px)
             margin-top: 20px
+
         &__card-social
             display: none
+
         &__card-detail
             gap: 17px
-
-// @media (max-width: 360px)
-//     .travel-history
-//         &__card-title
-//             width: 160px
-//         &__card-paragraph
-//             width: 283px
-//             margin-top: 20px

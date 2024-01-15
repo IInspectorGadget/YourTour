@@ -1,42 +1,53 @@
 .choose-tour
     &__container
-        display: flex 
+        display: flex
         flex-direction: column
-        align-items: center 
+        align-items: center
+
     &__list
-        margin-top: 35px
-        display: flex 
+        display: flex
         flex-wrap: wrap
         justify-content: center
         gap: 0 30.5px
+        margin-top: 35px
+
     &__item
-        border-bottom: 2px solid transparent
         padding-bottom: 4px
+
         color: var(--black)
+        border-bottom: 2px solid transparent
+
         transition: border-color 200ms ease, color 200ms ease
+
         &:hover
-            cursor: pointer
             border-color: var(--black)
+
+            cursor: pointer
+
     &__item-active
         color: var(--orange-200)
         border-bottom: 2px solid var(--orange-200)
+
         &:hover
             border-bottom: 2px solid var(--orange-200)
 
     &__cards
-        margin-top: 101px
-        display: flex 
+        display: flex
         justify-content: center
         flex-wrap: wrap
         gap: 30px
-    &__card 
+        margin-top: 101px
+
+    &__card
         position: relative
-        display: flex 
+
+        display: flex
+        overflow: hidden
         justify-content: center
         height: 531px
         width: 370px
+
         border-radius: 50px
-        overflow: hidden
         object-fit: cover
         object-position: center
 
@@ -45,57 +56,70 @@
                 background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%), url('../assets/images/cards/card_tour_photo-#{$i}.jpg')
                 background-size: cover
                 background-position: center
-        &-bottom 
+
+        &-bottom
             width: fit-content
-            
-        
+
         &-inner
             position: relative
+
+            display: flex
+            flex-direction: column
+            justify-content: space-between
             width: 100%
             padding: 50px
-            display: flex 
-            flex-direction: column 
-            justify-content: space-between
 
         &-title
             color: var(--white)
+
         &-cost
-            color: var(--white)
             margin-top: 16px
+
+            color: var(--white)
+
         &-detail-link
             color: var(--white)
-    
-    
 
 @media (max-width: 1024px)
     .choose-tour__cards
         gap: 18px
+
     .choose-tour__card
         width: 450px
 
 @media (max-width: 720px)
     .choose-tour__item
-        padding-bottom: 0px
         height: 22px
+        padding-bottom: 0px
+
     .choose-tour__list
+        gap: 11px 10px
+
+        max-width: 325px
         margin-top: 30px
         padding-bottom: 3px
-        max-width: 325px
-        gap: 11px 10px
+
     .choose-tour__cards
         margin-top: 46px
+
     .choose-tour__card
         width: 318px
         height: 318px
+
         border-radius: 20px
+
     .choose-tour__card-inner
         padding: 26px 25px 23px 25px
+        
     .choose-tour__card-link:hover
         background-color: inherit
+
     .choose-tour__card-link
+        gap: 18px
+
         margin-left: -20px
         margin-bottom: -5px
-        gap: 18px
+
     .choose-tour__card-detail
-        padding: 7px 19px
         margin: -7px -19px
+        padding: 7px 19px
