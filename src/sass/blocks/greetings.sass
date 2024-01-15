@@ -1,0 +1,67 @@
+.greetings
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(../assets/images/header/header-main.jpg)
+    background-size: cover
+    background-position: center
+    // height: 100svh
+
+    &__container
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            gap: 50px 0
+            height: 100%
+            padding-top: 208px
+            padding-bottom: 119px
+
+            text-align: center
+
+    &__title
+        max-width: 768px
+
+        color: var(--white)
+
+    &__subtitle
+        max-width: 562px
+
+        color: var(--white)
+
+    &__button
+        padding: 5px 20px
+
+        color: var(--black)
+        background-color: var(--white)
+        border-radius: 10px
+
+        transition: color 200ms ease, background-color 300ms ease
+
+        &:hover
+            color: var(--white)
+            background-color: var(--orange-200)
+
+        &:active
+            color: var(--black)
+            background-color: var(--orange-100)
+
+@media (max-width: 1024px)
+    .greetings
+        &__subtitle
+            max-width: 442px
+
+
+@media (max-width: 720px)
+    .greetings
+        height: 488px
+
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(../assets/images/header/header-main_mobile.jpg)
+        background-size: cover
+        background-position: center
+
+        &__subtitle
+            max-width: 310px
+            
+        &__container
+            gap: 40px 0
+            padding-top: 140px
+            padding-bottom: 52px
+

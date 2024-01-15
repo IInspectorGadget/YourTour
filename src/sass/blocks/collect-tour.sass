@@ -69,9 +69,28 @@
 
         width: 100%
         height: 100%
-        visibility: hidden
 
-        background-image: url("../assets/images/icons/radiobuttonOn.svg")
+        appearance: none
+        border: 2px solid var(--black)
+        border-radius: 50%
+        &::before 
+            content: ""
+            position: absolute 
+            left: 50%
+            top: 50%
+
+            width: 12px 
+            height: 12px
+
+            transform: translate(-50%,-50%)
+
+            
+
+    &__radio:checked::before
+        background-color: var(--black)
+        border-radius: 50%
+
+            
 
     &__radio-button
         position: relative
@@ -79,18 +98,7 @@
         width: 26px
         height: 26px
 
-    &__radio-accent
-        position: absolute
-
-        width: 100%
-        height: 100%
-
-        background-image: url("../assets/images/icons/radiobutton.svg")
-        background-position: center
-        background-size: cover
-
-    &__radio:checked + &__radio-accent
-        background-image: url("../assets/images/icons/radiobuttonOn.svg")
+  
 
     &__radio-label::before
         content: ""
@@ -119,15 +127,14 @@
             content: ""
 
             position: absolute
-            left: 0
-            top: 0
+            left: 50%
+            top: 50%
 
-            width: 26px
-            height: 26px
-
-            background-image: url("../assets/images/icons/reactangleForm.svg")
-            background-repeat: no-repeat
-            background-position: center
+            width: 12.243px
+            height: 7.122px
+            border-bottom: 2px solid var(--black)
+            border-left: 2px solid var(--black)
+            transform: translate(calc(-50% + 0.5px),calc(-50% - 1.5px)) rotate(-45deg)
 
     &__select-wrapper
         position: relative
@@ -284,7 +291,7 @@
             letter-spacing: -0.003em
 
         &__textarea
-            height: 132px
+            min-height: 132px
 
         &__buttons
             gap: 10px
@@ -316,6 +323,14 @@
             width: 20px
             height: 20px
 
+        &__radio::before
+            width: 10px
+            height: 10px
+        &__radio:checked::before
+            background-color: var(--black)
+            border-radius: 50%
+            transform: translate(-50%,-50%)
+
         &__adult-item
             align-items: center
             gap: 10px
@@ -328,5 +343,5 @@
             height: 20px
 
             &:checked::before
-                width: 20px
-                height: 20px
+                width: 9.5px
+                height: 5.5px
