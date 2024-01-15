@@ -39,9 +39,9 @@ export const  collectTour = () => {
             
             if (!inputNumbersValue)  return input.value = "";
 
-            // Изменение символов в середине текста
+            // Change characters in the middle of text
             if (input.value.length != selectionStart) {
-                    //Вносим изменения при правильном вводе и меняем расположение курсора
+                    //We make changes if the input is correct and change the cursor location
                     if (e.data && numberReg.test(e.data)) {
                         input.value = updateText(inputNumbersValue, input);
                         input.selectionEnd= selectionStart - 1
@@ -59,7 +59,7 @@ export const  collectTour = () => {
         
         
         const onPhoneKeyDown =  (e) => {
-            // Удаляем последний символ 
+            // Remove the last character
             const inputValue = e.target.value.replace(numberReg, '');
             if (e.keyCode == 8 && inputValue.length == 1) {
                 e.target.value = "";

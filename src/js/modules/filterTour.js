@@ -6,9 +6,9 @@ export const filterTour = () => {
     const setFilter = (curCategory, filter) => {
 
 
-        //Обновляем класс ..active
+        //Update class ..active
         if (!curCategory.classList.contains("choose-tour__item-active")){
-            //Удаляем у старой категории класс актив
+            //Delete the asset class from the old category
             for(const category of categories){
                 category.classList.remove("choose-tour__item-active")
             }
@@ -17,7 +17,7 @@ export const filterTour = () => {
             localStorage.setItem("filter", enablesCategory);
         }
 
-        //элементам которые не соответствуют фильтру добавляем display: none
+        //add display: none to elements that do not match the filter
         for(const card of cards){
             const types = card.getAttribute("data-type");
             const id = Number(card.getAttribute("data-id"))
@@ -36,11 +36,11 @@ export const filterTour = () => {
 
     for(const category of categories ){
         const filter = category.getAttribute("data-filter");
-        //Первичная установка фильтра из localstorage
+        //Initial installation of the filter from localstorage
         if(enablesCategory == filter){
             setFilter(category, filter);
         }
-        //Вешаем обработчик для изменения фильтра по нажатию на категорию
+        //Attach a handler for changing the filter when clicking on a category
         category.addEventListener('click', ()=>{
             setFilter(category, filter);
         })
