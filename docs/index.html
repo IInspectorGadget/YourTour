@@ -15,8 +15,8 @@
 	</head>
 	<body>
 		<header class="header">
-			<div class="header__wrapper-top ">
-				<div class="container header__top  p-normal">
+			<div class="header__wrapper">
+				<div class="container header__container p-normal">
 					<a href="#" class="header__link">
 						<img class="header__logo" src="assets/images/header/YourTour.svg" alt="logo">
 					</a>
@@ -31,15 +31,17 @@
 					<a class="header__phone" href="tel:+79999999999">+7 999 999 99 99</a>
 				</div>
 			</div>
-			
-			<div class="container header__bottom">
-					<h1 class="header__title h1">Идеальные путешествия существуют</h1>
-					<p class="header__subtitle p-normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
-					<a href="#" class="header__button p-small">Найти тур</a>
-			</div>
 		</header>
 
 		<main class="main">
+			<section class="greetings">
+				<div class="container greetings__container">
+						<h1 class="greetings__title h1">Идеальные путешествия существуют</h1>
+						<p class="greetings__subtitle p-normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
+						<a href="#" class="greetings__button p-small">Найти тур</a>
+				</div>
+			</section>
+
 			<section class="choose-tour" id="choose-tour">
 				<div class="container container_padding-top choose-tour__container">
 					<h2 class="choose-tour__title h2 title">Выбери свой тур</h2>
@@ -184,17 +186,17 @@
 
 							<div class="collect-tour__item">
 								<span class="collect-tour__label">Телефон</span>
-								<input required autocomplete="on" id="tel" name="tel" type="tel" class="collect-tour__field" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _">
+								<input maxlength="19" required autocomplete="on" id="tel" name="tel" type="tel" class="collect-tour__field"  placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _">
 							</div>
 
 							<div class="collect-tour__item">
 								<span class="collect-tour__label p-normal">Дата от</span>
-								<input required id="date-start" name="date-start" type="date" class="collect-tour__field collect-tour__date unstyled-date">
+								<input max="9999-12-31" required id="date-start" name="date-start" type="date" class="collect-tour__field collect-tour__date unstyled-date">
 							</div>
 
 							<div class="collect-tour__item">
 								<span class="collect-tour__label">Дата до</span>
-								<input required id="date-end" name="date-end" type="date" class="collect-tour__field collect-tour__date  unstyled-date">
+								<input max="9999-12-31" required id="date-end" name="date-end" type="date" class="collect-tour__field collect-tour__date  unstyled-date">
 							</div>
 
 							<div class="collect-tour__item collect-tour__item_full">
@@ -208,14 +210,12 @@
 									<div class="collect-tour__adult-item">
 										<div class="collect-tour__radio-button">
 											<input value="yes" id="yes" name="adult" type="radio" class="collect-tour__radio">
-											<div value="yes" id="yes" name="adult" type="radio" class="collect-tour__radio-accent"></div>
 										</div>
 										<label for="yes" class="collect-tour__radio-label">Да</label>
 									</div>
 									<div class="collect-tour__adult-item">
 										<div class="collect-tour__radio-button">
 											<input value="no" id="no" name="adult" type="radio" class="collect-tour__radio">
-											<div value="yes" id="yes" name="adult" type="radio" class="collect-tour__radio-accent"></div>
 										</div>
 										<label for="no" class="collect-tour__radio-label">Нет</label>
 									</div>
