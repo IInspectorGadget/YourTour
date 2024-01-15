@@ -11,7 +11,9 @@ export const  collectTour = () => {
         const updateText = (inputNumbersValue) =>{
             let formattedInputValue = "";
             if (inputNumbersValue[0] === "9" || inputNumbersValue[0] === "7") {
-                if (inputNumbersValue[0] == "9") inputNumbersValue = "7" + inputNumbersValue;
+
+                if (inputNumbersValue[0] === "9") inputNumbersValue = "7" + inputNumbersValue;
+                
                 formattedInputValue =  "+ 7 ";
 
                 const cases = [

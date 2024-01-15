@@ -23,7 +23,7 @@ export const filterTour = () => {
             const id = Number(card.getAttribute("data-id"))
             const displayItems = []
             for (const type of types.split(" ")){
-                if (enablesCategory != type  && displayItems.indexOf(id) == -1){
+                if (enablesCategory !== type  && displayItems.indexOf(id) === -1){
                     card.style.display = "none";
                 } else {
                     displayItems.push(id);
@@ -37,7 +37,7 @@ export const filterTour = () => {
     for(const category of categories ){
         const filter = category.getAttribute("data-filter");
         //Initial installation of the filter from localstorage
-        if(enablesCategory == filter){
+        if(enablesCategory === filter){
             setFilter(category, filter);
         }
         //Attach a handler for changing the filter when clicking on a category
